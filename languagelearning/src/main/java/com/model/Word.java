@@ -12,6 +12,12 @@ public class Word {
     private UUID uuid;
 
     public Word(String word, String meaning){
+        if (word == null){
+            word = "Default";
+        }
+        if (meaning == null){
+            meaning = "Default";
+        }
         this.word = word;
         this.meaning = meaning;
     }

@@ -36,11 +36,28 @@
     ]
   },
   {
-    "uuid": "cf874699-564c-43d8-8b24-87171c663ab7",
-    "firstname": "Tommy",
-    "lastname": "Tomacka",
-    "username": "ttomacka",
-    "email": "ex@gmail.com",
+    "uuid": "d79ece26-acb0-4015-8262-dc9d14d48e32",
+    "firstname": "null",
+    "lastname": "null",
+    "username": "test",
+    "email": "test@gmail",
+    "password": "pw",
+    "ProfPoints": 0,
+    "settings": {
+      "emailNotifications": "true",
+      "darkMode": "true"
+    },
+    "courses": [
+    ],
+    "words": [
+    ]
+  },
+  {
+    "uuid": "5d28442d-c60c-4872-874c-8f48143387cd",
+    "firstname": "null",
+    "lastname": "null",
+    "username": "null",
+    "email": "super@gmail.com",
     "password": "password",
     "ProfPoints": 0,
     "settings": {
@@ -48,27 +65,25 @@
       "darkMode": "true"
     },
     "courses": [
-      {
-        "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
-        "progress": 0
-      }
     ],
     "words": [
-      "Nombre : Name",
-      "Gracias : Thanks",
-      "Casa : House",
-      "Comida : Food",
-      "Familia : Family",
-      "Libro : Book",
-      "Agua : Water",
-      "Como estas : How are you",
-      "Me llamo : My name is",
-      "Que hora es : What time is it",
-      "Donde esta el baño : Where is the bathroom",
-      "Tengo hambre : I am hungry",
-      "Puedes ayudarme : Can you help me",
-      "Mucho gusto : Nice to meet you",
-      "Hasta luego : See you later"
+    ]
+  },
+  {
+    "uuid": "81c5d619-8df3-4dd3-b53a-7a232763ab34",
+    "firstname": "null",
+    "lastname": "null",
+    "username": "TheBroMan",
+    "email": "null",
+    "password": "password",
+    "ProfPoints": 0,
+    "settings": {
+      "emailNotifications": "true",
+      "darkMode": "true"
+    },
+    "courses": [
+    ],
+    "words": [
     ]
   }
 ]
