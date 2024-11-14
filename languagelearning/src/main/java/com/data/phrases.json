@@ -1,0 +1,95 @@
+{
+    "phrases":[
+        {
+        "difficulty": 1,
+        "commonPhrases":[
+            {
+                "english": "Good Night",
+                "language": "Buenas Noches",
+                "alternatives":["Buenas Tardes", "Buenos Dias", "Como te llamas", "Quando Quenta"]
+            },
+            {
+                "english": "Good Afternoon",
+                "language": "Buenas Tardes",
+                "alternatives":["Buenas Noches", "Buenos Dias", "Como te llamas", "Quando Quenta"]
+            },
+            {
+                "english": "Good Morning",
+                "language": "Buenas Dias",
+                "alternatives":["Buenas Tardes", "Buenos Noches", "Como te llamas", "Quando Quenta"]
+            },
+            {
+                "english": "What is your name?",
+                "language": "Como to llamas",
+                "alternatives":["Buenas Tardes", "Buenos Dias", "Como te llamas", "Quando Quenta"]
+            },
+            {
+                "english": "I am good",
+                "language": "Estoy bien",
+                "alternatives":["Buenas Tardes", "Buenos Dias", "Como te llamas", "Quando Quenta"]
+            }
+        ]
+     },
+     {
+        "difficulty":2,
+        "celebrations":[
+            {
+                "english": "Happy Birthday",
+                "language": "Feliz Cumpleanos",
+                "alternatives":["Buena suerte", "Bien hecho", "Felicitaciones", "Salud"]
+            },
+            {
+                "english": "Good Luck",
+                "language": "Buena suerte",
+                "alternatives":["Feliz Cumpleanos", "Bien hecho", "Felicitaciones", "Salud"]
+            },
+            {
+                "english": "Take care",
+                "language": "Cuidate",
+                "alternatives":["Buena suerte", "Bien hecho", "Felicitaciones", "Salud"]
+            },
+            {
+                "english": "Cheers",
+                "language": "Salud",
+                "alternatives":["Buena suerte", "Bien hecho", "Felicitaciones", "Feliz"]
+            },
+            {
+                "english": "Congratulations",
+                "language": "Felicitaciones",
+                "alternatives":["Buena suerte", "Bien hecho", "Feliz", "Salud"]
+            }
+
+        ]
+     },
+     {
+        "difficulty":3,
+        "askingForHelp":[
+            {
+                "english": "Can you help me?",
+                "language": "Puede ayudarme",
+                "alternatives":["No entiendo", "No se", "No hablo espanol", "Estoy perdido"]
+            },
+            {
+                "english": "I don't understand",
+                "language": "No entiendo",
+                "alternatives":["Puede ayudarme", "No se", "No hablo espanol", "Estoy perdido"]
+            }, 
+            {
+                "english": "I don't know ",
+                "language": "No se",
+                "alternatives":["No entiendo", "Puede ayudarme", "No hablo espanol", "Estoy perdido"]
+            },
+            {
+                "english": "I don't speak Spanish",
+                "language": "No hablo espanol",
+                "alternatives":["No entiendo", "No se", "Puede ayudarme", "Estoy perdido"]
+            },
+            {
+                "english": "I'm lost",
+                "language": "Estoy perdido",
+                "alternatives":["No entiendo", "No se", "Puede ayudarme", "No hablo espanol"]
+            }             
+        ]
+     }
+    ]
+}
