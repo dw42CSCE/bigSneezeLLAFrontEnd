@@ -3,6 +3,7 @@ module com.language {
     requires javafx.fxml;
     requires junit;
     requires json.simple;
+    requires jlayer;
     requires software.amazon.awssdk.core;
     requires software.amazon.awssdk.services.polly;
     requires software.amazon.awssdk.regions;
