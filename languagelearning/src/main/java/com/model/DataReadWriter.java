@@ -13,11 +13,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.io.BufferedReader;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import java.nio.file.Paths;
 
 import software.amazon.awssdk.utils.async.InputStreamConsumingPublisher;
 
@@ -81,6 +83,7 @@ public class DataReadWriter extends DataConstants{
             }
             return users;
         } catch (Exception e) {
+            System.out.println("No File Found");
             e.printStackTrace();
         }
         return null;
@@ -347,5 +350,22 @@ public class DataReadWriter extends DataConstants{
             System.out.println("userCourses is null.");
         }
         return courses;
+    }
+    public static void main(String[] args) {
+        // Initialize the test class and call the getUsers method
+
+        String path = Paths.get("languagelearning/src/resources/UserInfo.json").toAbsolutePath().toString();
+        System.out.println("Absolute Path: " + path); // To confirm the path
+        ArrayList<User> users = DataReadWriter.getUsers();
+
+        // Check if the users list was populated and print the result
+        if (users != null) {
+            System.out.println("Number of users loaded: " + users.size());
+            for (User user : users) {
+                System.out.println("User: " + user.getUsername());
+            }
+        } else {
+            System.out.println("Failed to load users. Please check file path and contents.");
+        }
     }
 }

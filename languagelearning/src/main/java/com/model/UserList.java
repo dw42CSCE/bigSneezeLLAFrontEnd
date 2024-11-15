@@ -42,9 +42,11 @@ public class UserList {
             return;
         }
     }
-    User newUser = new User(username, password, email);
-    users.add(newUser);
-    System.out.println("User added successfully.");
+    if(username != null & email != null & password != null){
+      User newUser = new User(username, password, email);
+      users.add(newUser);
+      System.out.println("User added successfully.");
+    }
 }
 
   /**

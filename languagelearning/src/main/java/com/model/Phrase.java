@@ -20,6 +20,12 @@ public class Phrase {
      * @param translation String of the english translation
      */
     public Phrase(String phrase, String translation) {
+        if (phrase == null){
+            phrase = "Default";
+        }
+        if (translation== null){
+            translation = "Default";
+        }
         this.phrase = phrase;
         this.translation = translation;
         String array[] = phrase.split(" ");
