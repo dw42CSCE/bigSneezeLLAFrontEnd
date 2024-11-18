@@ -4,10 +4,10 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import com.language.App;
 
-public class SecondaryController {
+public class SignUpController {
 
     @FXML
-    private void switchToPrimary() throws IOException {
-        App.setRoot("primary");
+    private void switchToLogin() throws IOException {
+        App.setRoot("login");
     }
 }

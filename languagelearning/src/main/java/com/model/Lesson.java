@@ -54,11 +54,11 @@ public class Lesson {
      */
     public Exercise generateExercise() {
         Random rand = new Random();
-        int choice = rand.nextInt(0,5);
+        int choice = rand.nextInt(5);
         Exercise exercise = null;
         switch (choice) {
             case 0: //Translation
-                exercise = new Translation(keyWords[(rand.nextInt(0, keyWords.length))]);
+                exercise = new Translation(keyWords[(rand.nextInt(keyWords.length))]);
                 // System.out.println("test1");
                 break;
             case 1: //Matching
@@ -78,7 +78,7 @@ public class Lesson {
                 // System.out.println("test5");
                 break;
             default:
-                exercise = new Translation(keyWords[(rand.nextInt(0, keyWords.length))]);
+                exercise = new Translation(keyWords[(rand.nextInt(keyWords.length))]);
                 // System.out.println("testD");
                 break;
         }
