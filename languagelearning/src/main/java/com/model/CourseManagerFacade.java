@@ -10,6 +10,8 @@ import com.narration.*;
 
 // CourseManagerFacade Class
 public class CourseManagerFacade {
+    private static CourseManagerFacade instance;
+
     private User user;
     private UserList users;
     private CourseList courses;
@@ -20,9 +22,17 @@ public class CourseManagerFacade {
     /**
      * Default Constructor, will get newest UserList and CourseList
      */
-    public CourseManagerFacade() {
+    private CourseManagerFacade() {
         courses = CourseList.getInstance();
-        users = UserList.getInstance(); 
+        users = UserList.getInstance();
+    }
+
+    // Public method to access the single instance of the CMF
+    public static CourseManagerFacade getInstance() {
+        if (instance == null) {
+            instance = new CourseManagerFacade();
+        }
+        return instance;
     }
 
     /**
@@ -36,9 +46,11 @@ public class CourseManagerFacade {
          user = users.getUser(username, password);
          if (user == null) {
              System.out.println("Login failed: user not found.");
+             return null;
+         } else{
+            System.out.println("Useremail:" + user.getEmailAddress());
+            return user;
          }
-
-         return user;
      }
 
     /**

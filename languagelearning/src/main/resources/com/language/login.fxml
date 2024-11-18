@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="76.0" fitWidth="86.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../../../../../../../Pictures/Camera%20Roll%201/Syoyos.jpg" />
+                  <Image url="@imgs\Logo.png" />
                </image>
                <VBox.margin>
                   <Insets top="10.0" />

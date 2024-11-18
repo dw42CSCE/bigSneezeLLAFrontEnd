@@ -7,7 +7,7 @@ public class UserInterface {
     private static  CourseManagerFacade facade;
 
     public UserInterface(){
-        facade = new CourseManagerFacade();
+        facade = facade.getInstance();
     }
 
     public static void main(String[] args) {
@@ -21,7 +21,6 @@ public class UserInterface {
 
     public static void scenario1(){
 
-        CourseManagerFacade facade = new CourseManagerFacade();
 
         facade.signUp("ttomacka", "ttom@gmail.com", "pw");
 
@@ -91,7 +90,7 @@ public class UserInterface {
 
     public static void scenario2(){
 
-        CourseManagerFacade cmf = new CourseManagerFacade();
+        CourseManagerFacade cmf = facade;
         
         cmf.signUp("jimmy", "jimmyj@gmail.com", "pw");
         cmf.login("jimmy", "pw");
@@ -105,7 +104,6 @@ public class UserInterface {
             input = k.nextLine();
         }
 
-        cmf = new CourseManagerFacade();
         cmf.login("jimmy", "pw");
         cmf.addUserCourse(cmf.getAllCourses().getCourse(0));
         cmf.playGame();
@@ -117,7 +115,6 @@ public class UserInterface {
             input = k.nextLine();
         }
 
-        cmf = new CourseManagerFacade();
         cmf.login("jimmy", "pw");
         cmf.playGame();
         cmf.logOut();
