@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
@@ -40,8 +40,14 @@
             </ImageView>
          </children>
       </VBox>
-         <TextField fx:id="usernameField" promptText="Username" layoutX="30.0" layoutY="316.0" prefHeight="38.0" prefWidth="87.0" />
-         <TextField fx:id="passwordField" promptText="Password" prefHeight="38.0" prefWidth="87.0" />
+         <TextField fx:id="usernameField" layoutX="30.0" layoutY="316.0" maxWidth="118.0" prefHeight="34.0" prefWidth="118.0" promptText="Username">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></TextField>
+         <TextField fx:id="passwordField" maxWidth="118.0" prefHeight="35.0" prefWidth="117.0" promptText="Password">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></TextField>
          <Button onAction="#login" prefHeight="30.0" prefWidth="118.0" text="Login">
             <VBox.margin>
                <Insets bottom="20.0" top="20.0" />
