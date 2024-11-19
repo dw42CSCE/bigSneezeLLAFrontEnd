@@ -60,6 +60,10 @@ public class CourseManagerFacade {
     public void addUserCourse(Course course){
         user.addCourse(course);
     }
+
+    public User getUser(){
+        return this.user;
+    }
     
     /**
      * Adds a user to the userlist with minimum required info, checks for duplicate 
