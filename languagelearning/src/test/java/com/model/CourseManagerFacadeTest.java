@@ -12,7 +12,7 @@ public class CourseManagerFacadeTest {
     @BeforeEach
     public void setUp() {
         // Initialize CourseManagerFacade object
-        CMF = new CourseManagerFacade();
+        CMF = CMF.getInstance();
     }
 
     @Test
