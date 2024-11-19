@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.image.Image?>
@@ -39,7 +40,7 @@
          <image>
             <Image url="@imgs/BGFox.png" />
          </image></ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+      <ImageView fitHeight="111.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6">
          <image>
             <Image url="@imgs/Fox.png" />
          </image>
@@ -59,9 +60,14 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <CheckBox mnemonicParsing="false" onAction="#toggleEmail" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-      <CheckBox mnemonicParsing="false" onAction="#toggleSound" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+      <CheckBox fx:id="emailCheckBox" mnemonicParsing="false" onAction="#toggleEmail" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+      <CheckBox fx:id="soundCheckBox" mnemonicParsing="false" onAction="#toggleSound" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
       <Button maxWidth="1000.0" minWidth="185.0" onAction="#switchToUpdateAccount" prefHeight="30.0" prefWidth="189.0" text="Update Account" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+      <Button minWidth="100.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Sign Out" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="9.0" />
+         </GridPane.margin>
+      </Button>
    </children>
     <stylesheets>
       <URL value="@styles.css" />
