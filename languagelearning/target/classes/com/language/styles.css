@@ -3,3 +3,11 @@
     -fx-background-radius: 15; 
     -fx-border-radius: 15;  
 }
+
+.language-progress-bar .track {
+    -fx-background-color:  #7BBCB6;
+}
+
+.language-progress-bar .bar {
+    -fx-background-color: #F2994B;
+}

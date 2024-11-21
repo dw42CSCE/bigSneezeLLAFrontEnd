@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="390.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.CourseHomeController">
+   <children>
+      <VBox prefHeight="218.0" prefWidth="390.0">
+         <children>
+            <Rectangle arcHeight="5.0" fill="#7bbcb6" height="11.0" stroke="#7bbcb6" strokeType="INSIDE" translateY="20.0" width="390.0" />
+            <Rectangle arcHeight="5.0" fill="#7bbcb6" height="52.0" stroke="#7bbcb6" strokeType="INSIDE" translateY="30.0" width="390.0" />
+            <Label fx:id="lbl_language" prefHeight="46.0" prefWidth="172.0" text="Label" textFill="WHITE" translateX="10.0" translateY="-25.0">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" fill="#7bbcb6" height="11.0" stroke="#7bbcb6" strokeType="INSIDE" translateY="-25.0" width="390.0" />
+            <HBox alignment="TOP_CENTER" prefHeight="46.0" prefWidth="390.0" translateY="-30.0">
+               <children>
+                  <Line endX="18.611114501953125" fill="#7bbcb6" startX="-100.0" stroke="#7bbcb6" translateX="-20.0" translateY="30.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Progress" translateY="20.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
+                  <Line endX="31.277780532836914" fill="#7bbcb6" startX="-100.0" stroke="#7bbcb6" translateX="20.0" translateY="30.0" />
+               </children>
+            </HBox>
+            <ProgressBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="362.0" progress="0.34" stylesheets="@styles.css" translateX="14.0" translateY="-35.0">
+               <styleClass>
+                  <String fx:value="language-progress-bar" />
+                  <String fx:value="track" />
+               </styleClass>
+            </ProgressBar>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="--%" translateX="175.0" translateY="-52.0" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
