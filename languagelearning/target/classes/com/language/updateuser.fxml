@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.LoginController">
+<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.UpdateUserController">
    <children>
       <ImageView fitHeight="90.0" fitWidth="363.0" pickOnBounds="true" preserveRatio="true">
          <image>
