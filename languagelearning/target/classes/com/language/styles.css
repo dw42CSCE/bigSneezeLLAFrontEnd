@@ -11,3 +11,7 @@
 .language-progress-bar .bar {
     -fx-background-color: #F2994B;
 }
+
+.scroll-pane {
+    -fx-background-color: #7BBCB6;
+}
