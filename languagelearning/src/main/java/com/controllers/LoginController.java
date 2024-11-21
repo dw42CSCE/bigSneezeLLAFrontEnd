@@ -26,7 +26,7 @@ public class LoginController {
     }
 
     @FXML
-    private void login() {
+    private void login() throws IOException {
         cmf = cmf.getInstance();
         String username = usernameField.getText();
         String password = passwordField.getText();
@@ -34,7 +34,7 @@ public class LoginController {
         if(cmf.login(username, password) != null){
             cmf.login(username, password);
             System.out.println("Successful Login!");
-            // App.setRoot("dashboard");
+            App.setRoot("dashboard");
         } else{
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setContentText("Incorrect Username or Password");

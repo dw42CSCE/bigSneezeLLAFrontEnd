@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.LoginController">
+   <children>
+      <VBox prefHeight="94.0" prefWidth="390.0" />
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="390.0">
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/LessonBanner.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="610.0" prefWidth="390.0">
+         <children>
+            <ImageView fitHeight="514.0" fitWidth="371.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/Fox%20Watermark.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox prefHeight="74.0" prefWidth="390.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#home" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Image%2014@1x.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="62.0" layoutY="3.0" onMouseClicked="#update" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Image%209%20Copy%201@1x.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="153.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Big Sneeze ©2024" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+</VBox>

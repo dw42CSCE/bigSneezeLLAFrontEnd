@@ -60,6 +60,10 @@ public class CourseManagerFacade {
     public void addUserCourse(Course course){
         user.addCourse(course);
     }
+
+    public User getUser(){
+        return this.user;
+    }
     
     /**
      * Adds a user to the userlist with minimum required info, checks for duplicate 
@@ -212,18 +216,22 @@ public class CourseManagerFacade {
     /**
      * Writes the Users incorrect words and phrases to text file for studying
      */
-public void makeStudyFile() {
-    WordList words = user.getIncorrect();
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter("study.txt"))) {
-        for (Word word : words.getWords()) {
-            writer.write(word.toString());
-            writer.newLine(); // Add a new line after each word
+    public void makeStudyFile() {
+        WordList words = user.getIncorrect();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("study.txt"))) {
+            for (Word word : words.getWords()) {
+                writer.write(word.toString());
+                writer.newLine(); // Add a new line after each word
+            }
+            System.out.println("Study material saved to study.txt");
+        } catch (IOException e) {
+            System.err.println("An error occurred while writing to the file: " + e.getMessage());
         }
-        System.out.println("Study material saved to study.txt");
-    } catch (IOException e) {
-        System.err.println("An error occurred while writing to the file: " + e.getMessage());
     }
-}
+
+    public void setUserSettings(boolean sound, boolean email){
+        user.setSettings(sound, email);
+    }
 
     /**
      * Tests the user on only the words and phrases they are strugging with
