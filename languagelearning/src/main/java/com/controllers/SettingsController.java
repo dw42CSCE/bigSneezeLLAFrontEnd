@@ -1,6 +1,5 @@
 package com.controllers;
 
-import java.io.IO;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -23,13 +22,21 @@ public class SettingsController {
 
     @FXML
     private CheckBox soundCheckBox;
-    
+
+    @FXML
+    private void switchToDashboard() throws IOException {
+        App.setRoot("dashboard");
+    }
+
     @FXML
     void switchToUpdateAccount(ActionEvent event) throws IOException{
         App.setRoot("updateuser");
     }
 
-
+    @FXML
+    private void switchToLogin() throws IOException {
+        App.setRoot("login");
+    }
 
     @FXML
     void toggleEmail(ActionEvent event) {

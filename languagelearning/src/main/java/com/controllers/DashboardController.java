@@ -16,11 +16,6 @@ public class DashboardController {
     private CourseManagerFacade cmf;
 
     @FXML
-    private void switchToDashboard() throws IOException {
-        App.setRoot("dashboard");
-    }
-
-    @FXML
     private void switchToSettings() throws IOException {
         App.setRoot("settings");
     }
