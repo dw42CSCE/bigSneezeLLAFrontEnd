@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.LoginController">
+<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.LessonController">
    <children>
       <VBox prefHeight="94.0" prefWidth="390.0" />
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="390.0">
@@ -32,12 +32,12 @@
          <children>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#home" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#switchToDashboard" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imgs/Image%2014@1x.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="62.0" layoutY="3.0" onMouseClicked="#update" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="62.0" layoutY="3.0" onMouseClicked="#switchToSettings" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imgs/Image%209%20Copy%201@1x.png" />
                      </image>

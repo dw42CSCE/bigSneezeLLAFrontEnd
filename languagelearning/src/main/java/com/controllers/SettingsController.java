@@ -31,35 +31,35 @@ public class SettingsController {
 
 
 
-@FXML
-void toggleEmail(ActionEvent event) {
-    cmf = cmf.getInstance();
+    @FXML
+    void toggleEmail(ActionEvent event) {
+        cmf = cmf.getInstance();
     
-    // Get the current state of the email checkbox
-    boolean email = emailCheckBox.isSelected();
-    // Retain the current state of the sound setting
-    boolean sound = cmf.getUser().getSettings().getDarkMode();
+        // Get the current state of the email checkbox
+        boolean email = emailCheckBox.isSelected();
+        // Retain the current state of the sound setting
+        boolean sound = cmf.getUser().getSettings().getDarkMode();
 
-    // Update user settings
-    cmf.setUserSettings(sound, email);
+        // Update user settings
+        cmf.setUserSettings(sound, email);
 
-    System.out.println("Email notifications updated to: " + email);
-}
+        System.out.println("Email notifications updated to: " + email);
+    }
 
-@FXML
-void toggleSound(ActionEvent event) {
-    cmf = cmf.getInstance();
+    @FXML
+    void toggleSound(ActionEvent event) {
+        cmf = cmf.getInstance();
     
-    // Get the current state of the sound checkbox
-    boolean sound = soundCheckBox.isSelected();
-    // Retain the current state of the email setting
-    boolean email = cmf.getUser().getSettings().getEmailNotifications();
+        // Get the current state of the sound checkbox
+        boolean sound = soundCheckBox.isSelected();
+        // Retain the current state of the email setting
+        boolean email = cmf.getUser().getSettings().getEmailNotifications();
 
-    // Update user settings
-    cmf.setUserSettings(sound, email);
+        // Update user settings
+        cmf.setUserSettings(sound, email);
 
-    System.out.println("Sound settings updated to: " + sound);
-}
+        System.out.println("Sound settings updated to: " + sound);
+    }
 
 
 }

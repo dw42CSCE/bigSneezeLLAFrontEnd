@@ -11,8 +11,8 @@ import com.model.User;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-public class DashboardController {
-    
+public class LessonController {
+
     private CourseManagerFacade cmf;
 
     @FXML
