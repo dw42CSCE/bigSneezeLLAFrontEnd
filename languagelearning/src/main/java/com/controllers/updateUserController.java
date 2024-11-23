@@ -27,6 +27,11 @@ public class UpdateUserController {
     private TextField passwordField;
 
     @FXML
+    private void switchToDashboard() throws IOException {
+        App.setRoot("dashboard");
+    }
+
+    @FXML
     private void switchToSettings() throws IOException {
         App.setRoot("settings");
     }
@@ -38,7 +43,7 @@ public class UpdateUserController {
         String lastName = lastNameField.getText();
         String emailAddress = emailAddressField.getText();
         String password = passwordField.getText();
-        
+
     }
 
 }
