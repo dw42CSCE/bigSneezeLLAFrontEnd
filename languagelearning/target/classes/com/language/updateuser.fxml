@@ -14,7 +14,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.UpdateUserController">
    <children>
       <ImageView fitHeight="90.0" fitWidth="363.0" pickOnBounds="true" preserveRatio="true">
@@ -51,11 +50,6 @@
                   <Font size="36.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" text="Update User" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="Email Address" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="First Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="Last Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="Password" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="105.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="43.0" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                <image>
@@ -91,9 +85,14 @@
                   <Insets bottom="5.0" />
                </GridPane.margin>
             </Rectangle>
+            <TextField fx:id="firstNameField" minWidth="361.0" text="First Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField fx:id="lastNameField" minWidth="361.0" text="Last Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <TextField fx:id="emailAddressField" minWidth="361.0" text="Email Address" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <TextField fx:id="passwordField" minWidth="361.0" text="Password" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#updateUser" text="Update User" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
-      <Button mnemonicParsing="false" text="Return to Settings">
+      <Button mnemonicParsing="false" onAction="#switchToSettings" text="Return to Settings">
          <VBox.margin>
             <Insets top="70.0" />
          </VBox.margin>

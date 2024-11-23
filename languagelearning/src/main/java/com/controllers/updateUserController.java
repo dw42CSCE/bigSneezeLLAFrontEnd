@@ -15,4 +15,30 @@ import javafx.event.ActionEvent;
 
 public class UpdateUserController {
     
+    private CourseManagerFacade cmf;
+
+    @FXML
+    private TextField firstNameField;
+    @FXML
+    private TextField lastNameField;
+    @FXML
+    private TextField emailAddressField;
+    @FXML
+    private TextField passwordField;
+
+    @FXML
+    private void switchToSettings() throws IOException {
+        App.setRoot("settings");
+    }
+
+    @FXML
+    private void updateUser() {
+        cmf = cmf.getInstance();
+        String firstName = firstNameField.getText();
+        String lastName = lastNameField.getText();
+        String emailAddress = emailAddressField.getText();
+        String password = passwordField.getText();
+        
+    }
+
 }
