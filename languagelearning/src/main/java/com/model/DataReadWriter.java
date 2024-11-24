@@ -102,7 +102,7 @@ public class DataReadWriter extends DataConstants{
             emailNotif = false;
         }
         if (settings.get(DARK_MODE) == "false"){
-            darkMode = true;
+            darkMode = false;
         }
 
 
@@ -200,6 +200,8 @@ public class DataReadWriter extends DataConstants{
             writer.write(jsonBuilder.toString());
             writer.flush();
             writer.close();
+
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

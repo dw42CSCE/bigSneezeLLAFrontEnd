@@ -44,8 +44,8 @@
     "password": "test",
     "ProfPoints": 0,
     "settings": {
-      "emailNotifications": "true",
-      "darkMode": "true"
+      "emailNotifications": "false",
+      "darkMode": "false"
     },
     "courses": [
       {
@@ -53,6 +53,7 @@
         "progress": 0
       }
     ],
-    "words": []
+    "words": [
+    ]
   }
 ]

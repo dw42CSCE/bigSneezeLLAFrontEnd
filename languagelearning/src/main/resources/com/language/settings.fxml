@@ -123,7 +123,7 @@
       <CheckBox fx:id="emailCheckBox" mnemonicParsing="false" onAction="#toggleEmail" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
       <CheckBox fx:id="soundCheckBox" mnemonicParsing="false" onAction="#toggleSound" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
       <Button maxWidth="1000.0" minWidth="185.0" onAction="#switchToUpdateAccount" prefHeight="30.0" prefWidth="189.0" text="Update Account" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="TOP" />
-      <Button minWidth="100.0" mnemonicParsing="false" onMouseClicked="#switchToLogin" prefHeight="26.0" prefWidth="98.0" text="Sign Out" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP">
+      <Button minWidth="100.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="26.0" prefWidth="98.0" text="Sign Out" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets top="9.0" />
          </GridPane.margin>

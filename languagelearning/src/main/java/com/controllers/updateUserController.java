@@ -38,11 +38,19 @@ public class UpdateUserController {
 
     @FXML
     private void updateUser() {
+
         cmf = cmf.getInstance();
+
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
         String emailAddress = emailAddressField.getText();
         String password = passwordField.getText();
+
+        cmf.updateUser(firstName, lastName, emailAddress, password);
+
+        cmf = cmf.getInstance();
+
+        cmf.update();
 
     }
 
