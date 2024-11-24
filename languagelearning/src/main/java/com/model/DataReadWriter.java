@@ -98,10 +98,10 @@ public class DataReadWriter extends DataConstants{
         boolean emailNotif = true;
         boolean darkMode = true;
 
-        if (settings.get(EMAIL_NOTIF) == "false"){
+        if (settings.get(EMAIL_NOTIF).equals("false")){
             emailNotif = false;
         }
-        if (settings.get(DARK_MODE) == "false"){
+        if (settings.get(DARK_MODE).equals("false")){
             darkMode = false;
         }
 
