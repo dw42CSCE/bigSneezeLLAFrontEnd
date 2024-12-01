@@ -44,12 +44,11 @@
     "password": "test",
     "ProfPoints": 0,
     "settings": {
-      "emailNotifications": "false",
+      "emailNotifications": "true",
       "darkMode": "false"
     },
     "courses": [
     ],
-    "words": [
-    ]
+    "words": []
   }
 ]
