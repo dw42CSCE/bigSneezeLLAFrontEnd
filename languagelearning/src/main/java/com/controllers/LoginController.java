@@ -35,7 +35,7 @@ public class LoginController {
             cmf.login(username, password);
             System.out.println("Successful Login!");
             // App.setRoot("dashboard");
-            App.setRoot("Lesson");
+            App.setRoot("coursehome");
         } else{
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setContentText("Incorrect Username or Password");
