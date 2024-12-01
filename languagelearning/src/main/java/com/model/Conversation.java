@@ -16,6 +16,10 @@ public class Conversation extends Exercise {
         this.question = question;
     }
 
+    public String getType(){
+        return "conversation";
+    }
+
     /**
      * Checkes user answer
      * @param userAnswer String of the users input

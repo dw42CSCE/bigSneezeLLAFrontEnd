@@ -49,6 +49,10 @@ public class Audio extends Exercise {
         return answer;
     }
 
+    public String getType(){
+        return "audio";
+    }
+
     /**
      * To String
      * @return String of instructions

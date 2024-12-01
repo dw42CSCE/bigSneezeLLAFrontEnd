@@ -17,6 +17,11 @@ public class Translation extends Exercise {
         return answer;
     }
 
+    public String getType(){
+        return "translation";
+    }
+
+
     /**
      * Checks if user's answer is right
      * @param useranswer String of the user's answer

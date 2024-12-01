@@ -19,6 +19,11 @@ public class FillIn extends Exercise {
         this.answer = question.getMissingWord();
     }
 
+    public String getType(){
+        return "fillin";
+    }
+
+
     public Word getWord(){
         return new Word(phrase.getPhrase(), phrase.getTranslation());
     }

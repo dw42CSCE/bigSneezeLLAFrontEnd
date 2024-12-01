@@ -58,6 +58,11 @@ public class Matching extends Exercise {
     public Word getWord(){
         return words[0];
     }
+
+    public String getType(){
+        return "matching";
+    }
+
     
 
     /**

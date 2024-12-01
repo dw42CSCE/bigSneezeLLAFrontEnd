@@ -6,6 +6,8 @@ public abstract class Exercise {
 
     public abstract String toString();
 
+    public abstract String getType();
+
     /**
      * Gets the word used in a specific question, if its a phrase, its converted to a word type
      * @return Subject of question in word form
