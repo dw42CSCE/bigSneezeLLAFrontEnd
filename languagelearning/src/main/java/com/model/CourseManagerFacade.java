@@ -35,6 +35,10 @@ public class CourseManagerFacade {
         return instance;
     }
 
+    public void updateUser(String firstName, String lastName, String email, String password){
+        users.editUser(firstName, lastName, email, password);
+    }
+
     /**
      * Logs in a user and sets this user
      * @param username String of username
@@ -231,6 +235,11 @@ public class CourseManagerFacade {
 
     public void setUserSettings(boolean sound, boolean email){
         user.setSettings(sound, email);
+        update();
+    }
+
+    public void update(){
+        DataReadWriter.updateUsers(users.getUsers());
     }
 
     /**

@@ -45,32 +45,10 @@
     "ProfPoints": 0,
     "settings": {
       "emailNotifications": "true",
-      "darkMode": "true"
-    },
-    "courses": [
-      {
-        "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
-        "progress": 0
-      }
-    ],
-    "words": [
-    ]
-  },
-  {
-    "uuid": "5f84ea21-6f86-4369-96f7-1f7c7aed7210",
-    "firstname": "null",
-    "lastname": "null",
-    "username": "",
-    "email": "",
-    "password": "",
-    "ProfPoints": 0,
-    "settings": {
-      "emailNotifications": "false",
       "darkMode": "false"
     },
     "courses": [
     ],
-    "words": [
-    ]
+    "words": []
   }
 ]

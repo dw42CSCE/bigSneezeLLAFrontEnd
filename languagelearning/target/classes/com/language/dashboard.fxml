@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="390.0" styleClass="style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.DashboardController">
    <children>
       <VBox prefHeight="53.0" prefWidth="535.0" />
-      <GridPane prefHeight="802.0" prefWidth="390.0">
+      <GridPane prefHeight="856.0" prefWidth="390.0">
         <columnConstraints>
             <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
@@ -102,5 +104,15 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7bbcb6" height="215.0" stroke="#7bbcb6" strokeType="INSIDE" width="350.0" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
+      <Pane prefHeight="200.0" prefWidth="464.0">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#switchToSettings" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/Settings.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="153.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Big Sneeze ©2024" />
+         </children>
+      </Pane>
    </children>
 </VBox>

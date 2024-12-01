@@ -11,15 +11,18 @@ import com.model.User;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-public class DashboardController {
-    
+public class LessonController {
+
     private CourseManagerFacade cmf;
+
+    @FXML
+    private void switchToDashboard() throws IOException {
+        App.setRoot("dashboard");
+    }
 
     @FXML
     private void switchToSettings() throws IOException {
         App.setRoot("settings");
     }
-
-    
 
 }

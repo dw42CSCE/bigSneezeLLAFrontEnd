@@ -32,7 +32,7 @@ public class SignUpController {
     }
 
     @FXML
-    private void signup() {
+    private void signup() throws IOException {
         cmf = cmf.getInstance();
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
@@ -43,7 +43,7 @@ public class SignUpController {
         if(cmf.signUp(username, emailAddress, password) != null){
             cmf.signUp(username, emailAddress, password);
             System.out.println("Successful Signup!");
-            // App.setRoot("dashboard");
+            App.setRoot("dashboard");
         } else{
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setContentText("Invalid Information");

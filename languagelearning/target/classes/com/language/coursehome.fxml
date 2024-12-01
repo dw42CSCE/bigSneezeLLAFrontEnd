@@ -2,10 +2,18 @@
 
 <?import java.lang.String?>
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
@@ -14,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.CourseHomeController">
    <children>
       <Rectangle arcHeight="5.0" fill="#7bbcb6" height="11.0" stroke="#7bbcb6" strokeType="INSIDE" translateY="20.0" width="390.0" />
       <Rectangle arcHeight="5.0" fill="#7bbcb6" height="52.0" stroke="#7bbcb6" strokeType="INSIDE" translateY="30.0" width="390.0" />
@@ -59,11 +67,99 @@
       <StackPane prefHeight="150.0" prefWidth="200.0" translateY="20.0">
          <children>
             <Rectangle arcHeight="5.0" fill="#7bbcb6" height="137.0" stroke="#7bbcb6" strokeType="INSIDE" width="390.0" />
-            <Rectangle arcHeight="5.0" fill="#ffffff89" height="124.0" stroke="#f2994b" strokeType="INSIDE" width="372.0" />
+            <Rectangle arcHeight="5.0" fill="#ffffffe3" height="124.0" stroke="#f2994b" strokeType="INSIDE" width="372.0" />
             <Circle fill="#7bbcb6" radius="13.0" stroke="#7bbcb6" strokeType="INSIDE" translateX="-185.0" />
             <Circle fill="#7bbcb6" radius="13.0" stroke="#7bbcb6" strokeType="INSIDE" translateX="185.0" />
+            <Label text="Boarding Pass" translateX="-105.0" translateY="-40.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" rotate="90.0" startX="-21.078983306884766" startY="-0.5295184850692749" stroke="#f2994b" translateX="90.0" />
+            <GridPane alignment="CENTER" prefHeight="150.0" prefWidth="302.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.6666666666667" minWidth="0.0" prefWidth="100.33331298828125" />
+                <ColumnConstraints halignment="LEFT" maxWidth="278.00000762939453" minWidth="0.0" prefWidth="162.66664632161456" />
+                  <ColumnConstraints halignment="LEFT" maxWidth="278.00000762939453" minWidth="0.0" prefWidth="109.66668701171875" />
+                  <ColumnConstraints halignment="LEFT" maxWidth="278.00000762939453" minWidth="0.0" prefWidth="10.333353678385436" />
+                  <ColumnConstraints halignment="LEFT" maxWidth="278.00000762939453" minWidth="0.0" prefWidth="6.6666259765625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="55.000010172526046" minHeight="9.666656494140625" prefHeight="50.33335367838542" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="59.333343505859375" minHeight="10.0" prefHeight="23.333333333333336" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="87.66668701171875" minHeight="10.0" prefHeight="18.333343505859375" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="87.66668701171875" minHeight="3.6666259765625" prefHeight="22.333323160807296" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="87.66668701171875" minHeight="5.66668701171875" prefHeight="19.3333740234375" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="87.66668701171875" minHeight="4.66668701171875" prefHeight="10.6666259765625" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="87.66668701171875" minHeight="9.666666666666657" prefHeight="9.666666666666657" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Passenger:" translateX="35.0" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label text="Destination:" translateX="35.0" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label text="Next Lesson:" translateX="35.0" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="14.0" prefWidth="278.0" scaleX="0.75" scaleY="0.5" translateX="-30.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+                  <TextField prefHeight="15.0" prefWidth="248.0" scaleX="0.75" scaleY="0.5" translateX="-30.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField prefHeight="15.0" prefWidth="248.0" scaleX="0.75" scaleY="0.5" translateX="-30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <GridPane prefHeight="22.0" prefWidth="59.0" translateX="-40.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.6666259765625" minWidth="10.0" prefWidth="29.6666259765625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.3333740234375" minWidth="10.0" prefWidth="80.3333740234375" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                      <RowConstraints maxHeight="12.999999523162842" minHeight="5.999999523162842" prefHeight="10.999999523162842" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="12.999999523162842" minHeight="5.999999523162842" prefHeight="10.999999523162842" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="6.000000476837158" prefHeight="8.000000476837158" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="5.6666259765625" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Row" GridPane.rowIndex="1" />
+                        <Label text="Seat" GridPane.rowIndex="3" />
+                        <TextField prefHeight="15.0" prefWidth="248.0" scaleX="0.25" scaleY="0.5" translateX="-30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField prefHeight="15.0" prefWidth="248.0" scaleX="0.25" scaleY="0.5" translateX="-30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
          </children>
       </StackPane>
+      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="318.0" text="Let's Go!" translateX="35.0" translateY="60.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Button>
+      <VBox prefHeight="54.0" prefWidth="390.0" style="-fx-background-color: #f4f4f4;" translateY="100.0">
+         <children>
+            <Line endX="380.0" stroke="#f2994b" strokeWidth="10.0" />
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#switchToDashboard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="62.0" layoutY="3.0" onMouseClicked="#switchToSettings" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Settings.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="153.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Big Sneeze ©2024" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
    </children>
    <stylesheets>
       <URL value="@styles.css" />

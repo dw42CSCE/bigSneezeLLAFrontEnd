@@ -8,12 +8,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.UpdateUserController">
    <children>
@@ -51,11 +52,6 @@
                   <Font size="36.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" text="Update User" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="Email Address" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="First Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="Last Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <TextField minWidth="361.0" text="Password" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="105.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="43.0" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                <image>
@@ -91,12 +87,33 @@
                   <Insets bottom="5.0" />
                </GridPane.margin>
             </Rectangle>
+            <Button mnemonicParsing="false" onAction="#updateUser" text="Update User" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <TextField fx:id="firstNameField" minWidth="361.0" text="First Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField fx:id="lastNameField" minWidth="361.0" text="Last Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <TextField fx:id="emailAddressField" minWidth="361.0" text="Email Address" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <TextField fx:id="passwordField" minWidth="361.0" text="Password" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button mnemonicParsing="false" text="Return to Settings">
+      <Button mnemonicParsing="false" onAction="#switchToSettings" text="Return to Settings">
          <VBox.margin>
             <Insets top="70.0" />
          </VBox.margin>
       </Button>
+      <Line endX="100.0" opacity="0.0" startX="-100.0" strokeWidth="18.0" />
+      <VBox prefHeight="74.0" prefWidth="390.0" style="-fx-background-color: #f4f4f4;">
+         <children>
+            <Line endX="380.0" stroke="#f2994b" strokeWidth="10.0" />
+            <Pane prefHeight="52.0" prefWidth="390.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#switchToDashboard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Home.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="153.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Big Sneeze ©2024" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
    </children>
 </VBox>
