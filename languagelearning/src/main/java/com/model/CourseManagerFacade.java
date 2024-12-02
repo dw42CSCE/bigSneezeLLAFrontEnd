@@ -407,8 +407,8 @@ public class CourseManagerFacade {
     /**
      * TESTING METHOD!!! DELETE LATER!!!
      */
-    public void setExercise(Word[] words){
-        exercise = new Audio(words);
+    public void setExercise(Exercise exercise){
+        this.exercise = exercise;
         exercises.add(exercise);
     }
 

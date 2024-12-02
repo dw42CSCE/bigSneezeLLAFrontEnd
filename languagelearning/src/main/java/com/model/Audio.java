@@ -1,7 +1,9 @@
 package com.model;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Set;
 import java.util.Collections;
+import java.util.HashSet;
 
 // Audio Exercise Class
 public class Audio extends Exercise {
@@ -11,32 +13,26 @@ public class Audio extends Exercise {
 
     /**
      * Constructor for Audio
-     * param options Arraylist of strings to generate question from
-     *
-    public Audio(ArrayList<String> options) {
-        this.options = options;
-        Random random = new Random();
-        int r = random.nextInt(options.size());
-        this.answer = options.get(r);
-    }
-    */
-
-    /**
-     * Constructor for Audio
      * @param options Arraylist of strings to generate question from
      */
     public Audio(Word[] words) {
         firstTry = true;
-        this.options = new ArrayList<Word>();
-        for (Word word : words) {
-            this.options.add(word);
+        this.options = new ArrayList<>();
+
+        Set<Word> uniqueOptions = new HashSet<>();
+
+        Random random = new Random();
+        while (uniqueOptions.size() < 4 && uniqueOptions.size() < words.length) {
+            Word randomWord = words[random.nextInt(words.length)];
+            uniqueOptions.add(randomWord);
         }
 
+        this.options.addAll(uniqueOptions);
         Collections.shuffle(options);
-        Random random = new Random();
-        int r = random.nextInt(options.size());
-        this.answer = options.get(r);
+
+        this.answer = options.get(random.nextInt(options.size()));
     }
+
 
     /**
      * Checks user answer
@@ -45,7 +41,7 @@ public class Audio extends Exercise {
      */
     public boolean isCorrect(String userAnswer) {
         firstTry = false;
-        return (this.answer.getWord().trim().equalsIgnoreCase(userAnswer.trim()));
+        return (this.answer.getMeaning().trim().equalsIgnoreCase(userAnswer.trim()));
     }
 
     public boolean getFirstTry(){

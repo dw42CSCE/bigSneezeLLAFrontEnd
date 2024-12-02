@@ -35,7 +35,7 @@ public class Translation extends Exercise {
      */
     public boolean isCorrect(String useranswer){
         firstTry = false;
-        return useranswer.trim().equalsIgnoreCase(answer.getWord());
+        return useranswer.trim().equalsIgnoreCase(answer.getMeaning());
     }
 
     public String toString(){

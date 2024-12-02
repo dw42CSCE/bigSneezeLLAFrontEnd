@@ -33,14 +33,19 @@ public class LoginController {
         if(cmf.login(username, password) != null){
             cmf.login(username, password);
             System.out.println("Successful Login!");
-            App.setRoot("dashboard");
+            // App.setRoot("dashboard");
+
+            cmf.setLesson(0);
+
+            cmf.setExercise(new Translation(new Word("testS", "testE")));
+            App.setRoot("translation");
 
             // Word word1 = new Word("test", "test");
             // Word word2 = new Word("test2", "test2");
             // Word word3 = new Word("test3", "test3");
             // Word word4 = new Word("test4", "test4");
             // Word[] words = {word1, word2, word3, word4};
-            // cmf.setLesson(0);
+            
             // cmf.setExercise(words);
             // App.setRoot("audio");
         } else{

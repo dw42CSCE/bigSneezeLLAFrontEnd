@@ -1,5 +1,7 @@
 package com.controllers;
 
+import static org.junit.Assert.assertThrows;
+
 import java.io.IOException;
 
 import com.language.App;
@@ -81,6 +83,7 @@ public class AudioController {
 
         if (selectedButton != null) {
             String selectedAnswer = selectedButton.getText();
+            System.out.println(selectedAnswer);
 
             if (currentExercise.isCorrect(selectedAnswer)) {
                 System.out.println("Correct Answer!");
@@ -131,7 +134,8 @@ public class AudioController {
                 Word word3 = new Word("test3", "test3");
                 Word word4 = new Word("test4", "test4");
                 Word[] words = {word1, word2, word3, word4};
-                cmf.setExercise(words);
+                Audio audio = new Audio(words);
+                cmf.setExercise(audio);
                 App.setRoot("audio");
             }
         }
