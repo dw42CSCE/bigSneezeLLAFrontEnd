@@ -4,12 +4,14 @@ package com.model;
 public class Translation extends Exercise {
 
     protected Word answer;
+    private boolean firstTry;
 
     /**
      * Parameterized Constructor
      * @param word Word word
      */
     public Translation(Word word) {
+        firstTry = true;
         this.answer = word;
     }
 
@@ -21,6 +23,10 @@ public class Translation extends Exercise {
         return "translation";
     }
 
+    public boolean getFirstTry(){
+        return firstTry;
+    }
+
 
     /**
      * Checks if user's answer is right
@@ -28,6 +34,7 @@ public class Translation extends Exercise {
      * @return Boolean, true if right, false if wrong
      */
     public boolean isCorrect(String useranswer){
+        firstTry = false;
         return useranswer.trim().equalsIgnoreCase(answer.getWord());
     }
 

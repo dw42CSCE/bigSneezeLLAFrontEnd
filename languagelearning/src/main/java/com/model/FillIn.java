@@ -1,5 +1,4 @@
 package com.model;
-import java.util.ArrayList;
 
 // FillIn Exercise Class
 public class FillIn extends Exercise {
@@ -7,16 +6,22 @@ public class FillIn extends Exercise {
     protected String question;
     protected String answer;
     protected String translation;
+    private boolean firstTry;
 
     /**
      * CLASS AUTHOR FILL THIS IN
      * @param question
      */
     public FillIn(Phrase question) {
+        firstTry = true;
         this.phrase = question;
         this.translation = question.getTranslation();
         this.question = question.getPhraseWithBlank();
         this.answer = question.getMissingWord();
+    }
+
+    public boolean getFirstTry(){
+        return firstTry;
     }
 
     public String getType(){
@@ -32,6 +37,7 @@ public class FillIn extends Exercise {
      * CLASS AUTHOR FILL THIS IN
      */
     public boolean isCorrect(String userAnswer) {
+        firstTry = false;
         return (answer.trim().equalsIgnoreCase(userAnswer.trim()));
     }
 

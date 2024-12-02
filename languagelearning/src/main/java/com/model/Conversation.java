@@ -1,11 +1,10 @@
 package com.model;
 
-import java.util.ArrayList;
-
 // Conversation Exercise Class
 public class Conversation extends Exercise {
     protected Phrase phrase;
     protected Phrase question;
+    private boolean firstTry;
 
     /**
      * Parameterized Constructor for Conversation
@@ -16,8 +15,15 @@ public class Conversation extends Exercise {
         this.question = question;
     }
 
+    /**
+     * Returns the type, conversation
+     */
     public String getType(){
         return "conversation";
+    }
+
+    public boolean getFirstTry(){
+        return firstTry;
     }
 
     /**
@@ -26,6 +32,7 @@ public class Conversation extends Exercise {
      * @return True if the equal to actual answer, else false
      */
     public boolean isCorrect(String userAnswer) {
+        firstTry = false;
         for (String option : question.getResponses())  {
             if (option.trim().equalsIgnoreCase(userAnswer.trim()))
                 return true;

@@ -1,12 +1,14 @@
 package com.model;
 
 public abstract class Exercise {
-    
+
     public abstract boolean isCorrect(String userAnswer);
 
     public abstract String toString();
 
     public abstract String getType();
+
+    public abstract boolean getFirstTry();
 
     /**
      * Gets the word used in a specific question, if its a phrase, its converted to a word type

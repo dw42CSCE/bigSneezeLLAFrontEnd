@@ -20,6 +20,8 @@ public class CourseManagerFacade {
     private Exercise exercise;
     private int lessonProgress;
     private int currentScore;
+    
+    ArrayList<Exercise> exercises;
 
     /**
      * Default Constructor, will get newest UserList and CourseList
@@ -28,6 +30,7 @@ public class CourseManagerFacade {
         courses = CourseList.getInstance();
         users = UserList.getInstance();
         course = courses.getCourse(0);
+        exercises = new ArrayList<Exercise>();
     }
 
     // Public method to access the single instance of the CMF
@@ -36,6 +39,20 @@ public class CourseManagerFacade {
             instance = new CourseManagerFacade();
         }
         return instance;
+    }
+
+    /**
+     * Gets the current lsit of answered exercises
+     * @return ArrayList of exercises
+     */
+    public ArrayList<Exercise> getExercises(){
+        return exercises;
+    }
+
+    public void decrementLessonProgress(){
+        if (lessonProgress > 0){
+            lessonProgress--;
+        }
     }
 
     /**
@@ -185,7 +202,7 @@ public class CourseManagerFacade {
      * @param index
      */
     public void setExercise(int index) {
-        exercise = lesson.getExercise(index);
+        exercise = exercises.get(index);
     }
 
     /**
@@ -217,6 +234,7 @@ public class CourseManagerFacade {
      * Progresses lesson by 1
      */
     public void nextLesson(){
+        exercises = new ArrayList<Exercise>();
         lesson = course.getLesson(course.getLessons().indexOf(lesson) + 1);
     }
     
@@ -225,6 +243,16 @@ public class CourseManagerFacade {
      */
     public void generateExercise(){
         exercise = lesson.generateExercise();
+        exercises.add(exercise);
+    }
+
+    /**
+     * Finds the saved 
+     * @param index
+     * @return
+     */
+    public Exercise getExercise(int index){
+        return exercises.get(index);
     }
 
 
@@ -379,9 +407,10 @@ public class CourseManagerFacade {
     /**
      * TESTING METHOD!!! DELETE LATER!!!
      */
-    // public void setExercise(Word[] words){
-    //     exercise = new Audio(words);
-    // }
+    public void setExercise(Word[] words){
+        exercise = new Audio(words);
+        exercises.add(exercise);
+    }
 
 // TEST FOR SIGNUP, will not write new user to json yet
     // public static void main(String[] args) {

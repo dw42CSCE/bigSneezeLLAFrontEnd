@@ -21,7 +21,6 @@ public class AudioController {
     private CourseManagerFacade cmf;
     private Lesson currentLesson;
     private Audio currentExercise;
-    private boolean firstTry;
 
     @FXML
     private Text lessonTitleText;
@@ -35,6 +34,9 @@ public class AudioController {
     @FXML
     private RadioButton option4Radio;
 
+    // @FXML
+    private boolean correct;
+
     private ToggleGroup toggleGroup;
 
     public AudioController() {
@@ -45,7 +47,6 @@ public class AudioController {
     public void initialize() {
         // Initialize ToggleGroup
         toggleGroup = new ToggleGroup();
-        firstTry = true;
 
         // Add RadioButtons to the ToggleGroup
         option1Radio.setToggleGroup(toggleGroup);
@@ -73,6 +74,9 @@ public class AudioController {
 
     @FXML
     void checkAnswer(ActionEvent event) {
+        for(Exercise exercise : cmf.getExercises()){
+            System.out.println(exercise.getWord());
+        }
         RadioButton selectedButton = (RadioButton) toggleGroup.getSelectedToggle();
 
         if (selectedButton != null) {
@@ -80,14 +84,12 @@ public class AudioController {
 
             if (currentExercise.isCorrect(selectedAnswer)) {
                 System.out.println("Correct Answer!");
-                if(firstTry){
-                    cmf.incrementLessonProgress();
+                correct = true;
+                if(currentExercise.getFirstTry()){
                     cmf.incrementScore();
                 }
-                firstTry = false;
             } else {
                 System.out.println("Incorrect Answer!");
-                firstTry = false;
             }
         } else {
             System.out.println("No option selected.");
@@ -97,49 +99,77 @@ public class AudioController {
 
     @FXML
     void nextQuestion(ActionEvent event) throws IOException {
-        if(cmf.getLessonProgress() == 5){
-            System.out.println("Switching to summary");
-            App.setRoot("summary");
-        } else{
-            cmf.generateExercise(); 
-            Exercise nextExercise = cmf.getExercise();
-            if(nextExercise.getType().equals("conversation")){
-                System.out.println("Switching to conversation");
-                App.setRoot("converation");
-            } else if(nextExercise.getType().equals("translation")){
-                System.out.println("Switching to translation");
-                App.setRoot("translation");
-            } else if(nextExercise.getType().equals("fillin")){
-                System.out.println("Switching to fillin");
-                App.setRoot("fillin");
-            } else if(nextExercise.getType().equals("matching")){
-                System.out.println("Switching to matching");
-                App.setRoot("matching");
-            } else if(nextExercise.getType().equals("audio")){
-                System.out.println("Switching to audio");
+        if(correct){
+            cmf.incrementLessonProgress();
+            if(cmf.getLessonProgress() == 5){
+                System.out.println("Switching to summary");
+                App.setRoot("summary");
+            } else{
+                // cmf.generateExercise(); 
+                // Exercise nextExercise = cmf.getExercise();
+                // if(nextExercise.getType().equals("conversation")){
+                //     System.out.println("Switching to conversation");
+                //     App.setRoot("converation");
+                // } else if(nextExercise.getType().equals("translation")){
+                //     System.out.println("Switching to translation");
+                //     App.setRoot("translation");
+                // } else if(nextExercise.getType().equals("fillin")){
+                //     System.out.println("Switching to fillin");
+                //     App.setRoot("fillin");
+                // } else if(nextExercise.getType().equals("matching")){
+                //     System.out.println("Switching to matching");
+                //     App.setRoot("matching");
+                // } else if(nextExercise.getType().equals("audio")){
+                //     System.out.println("Switching to audio");
+                //     App.setRoot("audio");
+                // }
+            
+
+                // THIS IS THE TESTING LOGIC TEMPORARY!!!!
+                Word word1 = new Word("test", "test");
+                Word word2 = new Word("test2", "test2");
+                Word word3 = new Word("test3", "test3");
+                Word word4 = new Word("test4", "test4");
+                Word[] words = {word1, word2, word3, word4};
+                cmf.setExercise(words);
                 App.setRoot("audio");
             }
-
-            // THIS IS THE TESTING LOGIC TEMPORARY!!!!
-            // Word word1 = new Word("test", "test");
-            // Word word2 = new Word("test2", "test2");
-            // Word word3 = new Word("test3", "test3");
-            // Word word4 = new Word("test4", "test4");
-            // Word[] words = {word1, word2, word3, word4};
-            // cmf.setExercise(words);
-            // App.setRoot("audio");
         }
     }
 
     @FXML
-    void previousQuestion(ActionEvent event) {
-        // Implement previousQuestion logic
-        // Logic to navigate to previous exercise if applicable
+    void previousQuestion(ActionEvent event) throws IOException{
+        cmf.decrementLessonProgress();
+        Exercise prevExercise = cmf.getExercises().get(cmf.getLessonProgress()-1);
+        initialize();
+
+        // if(prevExercise.getType().equals("conversation")){
+        //     System.out.println("Switching to conversation");
+        //     App.setRoot("converation");
+        // } else if(prevExercise.getType().equals("translation")){
+        //     System.out.println("Switching to translation");
+        //     App.setRoot("translation");
+        // } else if(prevExercise.getType().equals("fillin")){
+        //     System.out.println("Switching to fillin");
+        //     App.setRoot("fillin");
+        // } else if(prevExercise.getType().equals("matching")){
+        //     System.out.println("Switching to matching");
+        //     App.setRoot("matching");
+        // } else if(prevExercise.getType().equals("audio")){
+        //     System.out.println("Switching to audio");
+        //     App.setRoot("audio");
+        // }
+
+        App.setRoot("audio");
+
     }
 
     @FXML
     void sayWord(MouseEvent event) {
         if (currentExercise != null) {
+            System.out.println("Lesson progress: " + cmf.getLessonProgress());
+            System.out.println("Number of exercises: " + cmf.getExercises().size());
+
             Word word = currentExercise.getWord();
             Narrator.playSound(word.getWord());
             System.out.println("Playing word: " + word);

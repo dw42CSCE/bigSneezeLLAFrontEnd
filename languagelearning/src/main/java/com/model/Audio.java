@@ -7,6 +7,7 @@ import java.util.Collections;
 public class Audio extends Exercise {
     protected ArrayList<Word> options;
     protected Word answer;
+    private boolean firstTry;
 
     /**
      * Constructor for Audio
@@ -25,6 +26,7 @@ public class Audio extends Exercise {
      * @param options Arraylist of strings to generate question from
      */
     public Audio(Word[] words) {
+        firstTry = true;
         this.options = new ArrayList<Word>();
         for (Word word : words) {
             this.options.add(word);
@@ -42,7 +44,12 @@ public class Audio extends Exercise {
      * @return True if the user answer is the actual answer, else false
      */
     public boolean isCorrect(String userAnswer) {
+        firstTry = false;
         return (this.answer.getWord().trim().equalsIgnoreCase(userAnswer.trim()));
+    }
+
+    public boolean getFirstTry(){
+        return firstTry;
     }
     
     public Word getWord(){

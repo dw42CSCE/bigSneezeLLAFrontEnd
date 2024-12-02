@@ -3,7 +3,6 @@ package com.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Random;
 
 // Matching Exercise Class
 public class Matching extends Exercise {
@@ -11,12 +10,14 @@ public class Matching extends Exercise {
     protected String options;
     protected String answer;
     protected Word[] words;
+    private boolean firstTry;
 
     /**
      * CLASS AUTHOR WRITE THIS
      * @param answers
      */
     public Matching(Word[] words) {
+        firstTry = true;
         this.words = words;
         this.question = "";
         this.options = "";
@@ -55,6 +56,10 @@ public class Matching extends Exercise {
         this.answer = answerBuilder.substring(0, answerBuilder.length() - 1);
     }
 
+    public boolean getFirstTry(){
+        return firstTry;
+    }
+
     public Word getWord(){
         return words[0];
     }
@@ -71,6 +76,7 @@ public class Matching extends Exercise {
      * @return True if userAnswer is correct, else false
      */
     public boolean isCorrect(String userAnswer) {
+        firstTry = false;
         return (this.answer.trim().equalsIgnoreCase(userAnswer.trim()));
     }
 
