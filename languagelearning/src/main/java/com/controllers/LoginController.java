@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import com.language.App;
 import com.model.CourseManagerFacade;
 import com.narration.*;
-import com.model.User;
+import com.model.*;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
@@ -34,8 +34,7 @@ public class LoginController {
         if(cmf.login(username, password) != null){
             cmf.login(username, password);
             System.out.println("Successful Login!");
-            // App.setRoot("dashboard");
-            App.setRoot("coursehome");
+            App.setRoot("dashboard");
         } else{
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setContentText("Incorrect Username or Password");

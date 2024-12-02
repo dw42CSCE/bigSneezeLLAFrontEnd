@@ -49,6 +49,10 @@ public class Audio extends Exercise {
         return answer;
     }
 
+    public ArrayList<Word> getOptions(){
+        return options;
+    }
+
     public String getType(){
         return "audio";
     }

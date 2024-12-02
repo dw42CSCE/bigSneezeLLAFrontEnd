@@ -18,6 +18,8 @@ public class CourseManagerFacade {
     private Course course;
     private Lesson lesson;
     private Exercise exercise;
+    private int lessonProgress;
+    private int currentScore;
 
     /**
      * Default Constructor, will get newest UserList and CourseList
@@ -25,6 +27,7 @@ public class CourseManagerFacade {
     private CourseManagerFacade() {
         courses = CourseList.getInstance();
         users = UserList.getInstance();
+        course = courses.getCourse(0);
     }
 
     // Public method to access the single instance of the CMF
@@ -33,6 +36,19 @@ public class CourseManagerFacade {
             instance = new CourseManagerFacade();
         }
         return instance;
+    }
+
+    /**
+     * Increases lesson progress by 1 if its not at 5, else moved lesson to next
+     */
+    public void incrementLessonProgress(){
+        if (lessonProgress < 5){
+            lessonProgress++;
+        } 
+    }
+
+    public int getLessonProgress(){
+        return lessonProgress;
     }
 
     public void updateUser(String firstName, String lastName, String email, String password){
@@ -144,7 +160,16 @@ public class CourseManagerFacade {
      * @param index Lesson number - 1
      */
     public void setLesson(int index) {
+        lessonProgress = 0;
+        currentScore = 0;
         lesson = course.getLesson(index);
+    }
+
+    /**
+     * Adds 1 to the current score
+     */
+    public void incrementScore(){
+        currentScore++;
     }
 
     /**
@@ -187,6 +212,22 @@ public class CourseManagerFacade {
         this.user = null;
         DataReadWriter.updateUsers(users.getUsers());
     }
+
+    /**
+     * Progresses lesson by 1
+     */
+    public void nextLesson(){
+        lesson = course.getLesson(course.getLessons().indexOf(lesson) + 1);
+    }
+    
+    /**
+     * Makes new exercise
+     */
+    public void generateExercise(){
+        exercise = lesson.generateExercise();
+    }
+
+
 
     /**
      * Gets the Users settings
@@ -272,7 +313,6 @@ public class CourseManagerFacade {
             words.removeWord(word);
         }
     }
-    
 
     /**
      * Goes through User's first course, through lessons asking questions and tracking score
@@ -329,13 +369,19 @@ public class CourseManagerFacade {
                     }
                 }
                     
-                }
-                
-            } else {
-            System.out.println("First course is null.");
-            } 
-        }
+            }
+            
+        } else {
+        System.out.println("First course is null.");
+        } 
+    }
 
+    /**
+     * TESTING METHOD!!! DELETE LATER!!!
+     */
+    // public void setExercise(Word[] words){
+    //     exercise = new Audio(words);
+    // }
 
 // TEST FOR SIGNUP, will not write new user to json yet
     // public static void main(String[] args) {
