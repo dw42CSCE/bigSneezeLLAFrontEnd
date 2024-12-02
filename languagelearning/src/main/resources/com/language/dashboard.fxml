@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -7,6 +8,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="390.0" styleClass="style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.DashboardController">
    <children>
@@ -34,16 +37,77 @@
         </rowConstraints>
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="81.0" rotate="-29.4" stroke="WHITE" strokeType="INSIDE" width="648.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="81.0" rotate="33.7" stroke="WHITE" strokeType="INSIDE" width="648.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="98.0" rotate="31.4" stroke="WHITE" strokeType="INSIDE" width="651.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="161.0" stroke="WHITE" strokeType="INSIDE" width="132.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
             <ImageView fitHeight="280.0" fitWidth="343.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <image>
                   <Image url="@imgs/pport.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="spanishCourseButton" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#goToCourseHome" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                <image>
                   <Image url="@imgs/spain.png" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="205.57618713378906" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" top="15.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Where are we traveling today?" wrappingWidth="249.52992248535156" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" />
+               </GridPane.margin>
+            </Text>
+            <ImageView fitHeight="100.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@imgs/japan.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets bottom="60.0" right="3.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@imgs/france.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets top="105.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fitHeight="95.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@imgs/germany.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="42.666656494140625" minWidth="10.0" prefWidth="12.666657447814941" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.99999904632568" minWidth="10.0" prefWidth="83.33334255218506" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="23.33331298828125" minHeight="10.0" prefHeight="12.6666259765625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.3333740234375" minHeight="10.0" prefHeight="43.3333740234375" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="300.0" onMouseClicked="#goToSettings" pickOnBounds="true" preserveRatio="true" x="30.0" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@imgs/Settings.png" />
                </image>
             </ImageView>
          </children>
