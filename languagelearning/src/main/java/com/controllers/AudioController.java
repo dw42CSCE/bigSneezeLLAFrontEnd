@@ -108,35 +108,32 @@ public class AudioController {
                 System.out.println("Switching to summary");
                 App.setRoot("summary");
             } else{
-                // cmf.generateExercise(); 
-                // Exercise nextExercise = cmf.getExercise();
-                // if(nextExercise.getType().equals("conversation")){
-                //     System.out.println("Switching to conversation");
-                //     App.setRoot("converation");
-                // } else if(nextExercise.getType().equals("translation")){
-                //     System.out.println("Switching to translation");
-                //     App.setRoot("translation");
-                // } else if(nextExercise.getType().equals("fillin")){
-                //     System.out.println("Switching to fillin");
-                //     App.setRoot("fillin");
-                // } else if(nextExercise.getType().equals("matching")){
-                //     System.out.println("Switching to matching");
-                //     App.setRoot("matching");
-                // } else if(nextExercise.getType().equals("audio")){
-                //     System.out.println("Switching to audio");
-                //     App.setRoot("audio");
-                // }
+                cmf.generateExercise(); 
+                Exercise nextExercise = cmf.getExercise();
+                if(nextExercise.getType().equals("translation")){
+                    System.out.println("Switching to translation");
+                    App.setRoot("translation");
+                } else if(nextExercise.getType().equals("fillin")){
+                    System.out.println("Switching to fillin");
+                    App.setRoot("fillin");
+                } else if(nextExercise.getType().equals("matching")){
+                    System.out.println("Switching to matching");
+                    App.setRoot("matching");
+                } else if(nextExercise.getType().equals("audio")){
+                    System.out.println("Switching to audio");
+                    App.setRoot("audio");
+                }
             
 
                 // THIS IS THE TESTING LOGIC TEMPORARY!!!!
-                Word word1 = new Word("test", "test");
-                Word word2 = new Word("test2", "test2");
-                Word word3 = new Word("test3", "test3");
-                Word word4 = new Word("test4", "test4");
-                Word[] words = {word1, word2, word3, word4};
-                Audio audio = new Audio(words);
-                cmf.setExercise(audio);
-                App.setRoot("audio");
+                // Word word1 = new Word("test", "test");
+                // Word word2 = new Word("test2", "test2");
+                // Word word3 = new Word("test3", "test3");
+                // Word word4 = new Word("test4", "test4");
+                // Word[] words = {word1, word2, word3, word4};
+                // Audio audio = new Audio(words);
+                // cmf.setExercise(audio);
+                // App.setRoot("audio");
             }
         }
     }
@@ -147,25 +144,19 @@ public class AudioController {
         Exercise prevExercise = cmf.getExercises().get(cmf.getLessonProgress()-1);
         initialize();
 
-        // if(prevExercise.getType().equals("conversation")){
-        //     System.out.println("Switching to conversation");
-        //     App.setRoot("converation");
-        // } else if(prevExercise.getType().equals("translation")){
-        //     System.out.println("Switching to translation");
-        //     App.setRoot("translation");
-        // } else if(prevExercise.getType().equals("fillin")){
-        //     System.out.println("Switching to fillin");
-        //     App.setRoot("fillin");
-        // } else if(prevExercise.getType().equals("matching")){
-        //     System.out.println("Switching to matching");
-        //     App.setRoot("matching");
-        // } else if(prevExercise.getType().equals("audio")){
-        //     System.out.println("Switching to audio");
-        //     App.setRoot("audio");
-        // }
-
-        App.setRoot("audio");
-
+        if(prevExercise.getType().equals("translation")){
+            System.out.println("Switching to translation");
+            App.setRoot("translation");
+        } else if(prevExercise.getType().equals("fillin")){
+            System.out.println("Switching to fillin");
+            App.setRoot("fillin");
+        } else if(prevExercise.getType().equals("matching")){
+            System.out.println("Switching to matching");
+            App.setRoot("matching");
+        } else if(prevExercise.getType().equals("audio")){
+            System.out.println("Switching to audio");
+            App.setRoot("audio");
+        }
     }
 
     @FXML

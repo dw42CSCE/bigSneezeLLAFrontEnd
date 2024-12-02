@@ -74,10 +74,7 @@ public class TranslationController {
             } else{
                 cmf.generateExercise(); 
                 Exercise nextExercise = cmf.getExercise();
-                if(nextExercise.getType().equals("conversation")){
-                    System.out.println("Switching to conversation");
-                    App.setRoot("converation");
-                } else if(nextExercise.getType().equals("translation")){
+                if(nextExercise.getType().equals("translation")){
                     System.out.println("Switching to translation");
                     App.setRoot("translation");
                 } else if(nextExercise.getType().equals("fillin")){
@@ -110,10 +107,7 @@ public class TranslationController {
         Exercise prevExercise = cmf.getExercises().get(cmf.getLessonProgress()-1);
         initialize();
 
-        if(prevExercise.getType().equals("conversation")){
-            System.out.println("Switching to conversation");
-            App.setRoot("converation");
-        } else if(prevExercise.getType().equals("translation")){
+        if(prevExercise.getType().equals("translation")){
             System.out.println("Switching to translation");
             App.setRoot("translation");
         } else if(prevExercise.getType().equals("fillin")){

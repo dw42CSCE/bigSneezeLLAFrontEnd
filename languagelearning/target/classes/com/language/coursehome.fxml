@@ -135,7 +135,7 @@
             </GridPane>
          </children>
       </StackPane>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="318.0" text="Let's Go!" translateX="35.0" translateY="60.0">
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#startLesson" prefHeight="88.0" prefWidth="318.0" text="Let's Go!" translateX="35.0" translateY="60.0">
          <font>
             <Font size="32.0" />
          </font>
