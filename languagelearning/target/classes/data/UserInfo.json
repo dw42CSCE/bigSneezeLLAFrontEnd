@@ -28,7 +28,7 @@
       "Como estas : How are you",
       "Me llamo : My name is",
       "Que hora es : What time is it",
-      "Donde esta el ba?o : Where is the bathroom",
+      "Donde esta el baño : Where is the bathroom",
       "Tengo hambre : I am hungry",
       "Puedes ayudarme : Can you help me",
       "Mucho gusto : Nice to meet you",
@@ -48,61 +48,7 @@
       "darkMode": "false"
     },
     "courses": [
-      {
-      }
     ],
-    "words": [
-    ]
-  },
-  {
-    "uuid": "09c2074f-c15f-472e-937c-3e54ade1349e",
-    "firstname": "null",
-    "lastname": "null",
-    "username": "",
-    "email": "",
-    "password": "",
-    "ProfPoints": 0,
-    "settings": {
-      "emailNotifications": "false",
-      "darkMode": "false"
-    },
-    "courses": [
-    ],
-    "words": [
-    ]
-  },
-  {
-    "uuid": "1109ca9a-491d-4259-98e6-8cefa1a45294",
-    "firstname": "null",
-    "lastname": "null",
-    "username": "khix10",
-    "email": "dkdd",
-    "password": "asdf",
-    "ProfPoints": 0,
-    "settings": {
-      "emailNotifications": "false",
-      "darkMode": "false"
-    },
-    "courses": [
-    ],
-    "words": [
-    ]
-  },
-  {
-    "uuid": "7cb4bff8-dcea-4cfe-8fd3-b21639a5fd49",
-    "firstname": "null",
-    "lastname": "null",
-    "username": "kh",
-    "email": "kh",
-    "password": "12",
-    "ProfPoints": 0,
-    "settings": {
-      "emailNotifications": "false",
-      "darkMode": "false"
-    },
-    "courses": [
-    ],
-    "words": [
-    ]
+    "words": []
   }
 ]
