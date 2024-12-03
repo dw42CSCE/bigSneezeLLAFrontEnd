@@ -41,6 +41,10 @@ public class CourseManagerFacade {
         return instance;
     }
 
+    public Course getCourse(){
+        return course;
+    }
+
     /**
      * Gets the current lsit of answered exercises
      * @return ArrayList of exercises
