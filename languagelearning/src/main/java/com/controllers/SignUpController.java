@@ -42,6 +42,7 @@ public class SignUpController {
 
         if(cmf.signUp(username, emailAddress, password) != null){
             cmf.signUp(username, emailAddress, password);
+            cmf.getUser().setName(firstName, lastName);
             System.out.println("Successful Signup!");
             App.setRoot("dashboard");
         } else{
