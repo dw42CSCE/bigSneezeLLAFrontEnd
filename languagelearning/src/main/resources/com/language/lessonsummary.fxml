@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -18,7 +19,7 @@
    <children>
       <VBox prefHeight="94.0" prefWidth="390.0">
          <children>
-            <Text fx:id="lessonTitleText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Title Here)">
+            <Text fx:id="lessonTitleText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Summary Title)">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -30,6 +31,14 @@
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="390.0">
          <children>
             <Line endX="380.0" fill="WHITE" stroke="#f2994b" strokeWidth="10.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson Complete!" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </Text>
          </children>
       </VBox>
       <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="579.0" prefWidth="390.0">
@@ -48,11 +57,6 @@
                   <RowConstraints minHeight="150.0" prefHeight="0.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fitHeight="514.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER">
-                     <image>
-                        <Image url="@imgs/Fox%20Watermark.png" />
-                     </image>
-                  </ImageView>
                   <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -63,6 +67,36 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" stroke="WHITE" strokeType="INSIDE" width="149.0" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="88.0" />
+                           </GridPane.margin>
+                        </Rectangle>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="110.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="110.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Most Missed Words" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="110.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Circle fill="#7bbcb6" radius="8.0" stroke="#7bbcb6" strokeType="INSIDE" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="42.0" left="155.0" />
+                           </GridPane.margin>
+                        </Circle>
+                     </children>
                   </GridPane>
                   <GridPane GridPane.rowIndex="4">
                      <columnConstraints>
@@ -75,6 +109,22 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" stroke="WHITE" strokeType="INSIDE" width="149.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Circle fill="#7bbcb6" radius="8.0" stroke="#7bbcb6" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets top="33.0" />
+                           </GridPane.margin>
+                        </Circle>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Words Mastered" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                        </Text>
+                     </children>
                   </GridPane>
                   <GridPane GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <columnConstraints>
@@ -86,41 +136,17 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="127.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <ImageView fitHeight="270.0" fitWidth="337.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@imgs/summaryfox.png" />
+                     </image>
                      <GridPane.margin>
-                        <Insets left="10.0" />
+                        <Insets right="40.0" />
                      </GridPane.margin>
-                  </Rectangle>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Introduction" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <GridPane.margin>
-                        <Insets left="10.0" />
-                     </GridPane.margin>
-                  </Text>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="344.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
-                     <GridPane.margin>
-                        <Insets right="30.0" />
-                     </GridPane.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="344.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
-                     <GridPane.margin>
-                        <Insets right="30.0" />
-                     </GridPane.margin>
-                  </Rectangle>
-                  <Text fx:id="lessonIntro" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Info Here)" textAlignment="CENTER" wrappingWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
-                     <GridPane.margin>
-                        <Insets right="30.0" top="10.0" />
-                     </GridPane.margin>
-                  </Text>
-                  <Text fx:id="lessonKeyWords" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson KeyWords)" wrappingWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
-                     <GridPane.margin>
-                        <Insets right="30.0" top="10.0" />
-                     </GridPane.margin>
-                  </Text>
+                  </ImageView>
                </children>
             </GridPane>
             <GridPane>
@@ -135,7 +161,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
                <children>
-                  <Button minWidth="105.0" mnemonicParsing="false" onAction="#nextQuestion" text="Next" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                  <Button minWidth="105.0" mnemonicParsing="false" onAction="#nextQuestion" text="Home" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                      <GridPane.margin>
                         <Insets right="20.0" top="20.0" />
                      </GridPane.margin>

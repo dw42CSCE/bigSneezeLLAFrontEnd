@@ -29,7 +29,7 @@
          </children></VBox>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="390.0">
          <children>
-            <Line endX="380.0" stroke="#f2994b" strokeWidth="10.0" />
+            <Line endX="380.0" fill="WHITE" stroke="#f2994b" strokeWidth="10.0" />
          </children>
       </VBox>
       <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="579.0" prefWidth="390.0">
