@@ -49,8 +49,11 @@ public class DashboardController {
     @FXML
     public void initialize(){
         User currentUser = cmf.getUser();
-        firstnameText.setText(currentUser.getFirstName());
+        firstnameText.setText(currentUser.getFirstName()+ "!");
         usernameText.setText(currentUser.getUsername());
+        int pPoints = currentUser.getProfPoints();
+        String points = Integer.toString(pPoints);
+        PPText.setText(points);
     } 
     
 

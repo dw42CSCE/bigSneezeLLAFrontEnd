@@ -106,7 +106,7 @@ public class Lesson {
      * @return String of the lesson
      */
     public String toString() {
-        return (this.subject + "\n" + this.intro) + getWords(keyWords) + getPhrases(keyPhrases);
+        return getWords(keyWords) + getPhrases(keyPhrases);
     }
 
     /**

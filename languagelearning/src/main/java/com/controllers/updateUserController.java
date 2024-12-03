@@ -13,7 +13,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.CheckBox;
 import javafx.event.ActionEvent;
 
-public class UpdateUserController {
+public class updateUserController {
     
     private CourseManagerFacade cmf;
 

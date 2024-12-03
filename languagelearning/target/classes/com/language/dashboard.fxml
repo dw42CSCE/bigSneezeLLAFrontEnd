@@ -36,7 +36,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="81.0" rotate="-29.4" stroke="WHITE" strokeType="INSIDE" width="648.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="122.0" rotate="-29.4" stroke="WHITE" strokeType="INSIDE" width="648.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2994b" height="98.0" rotate="31.4" stroke="WHITE" strokeType="INSIDE" width="651.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="161.0" stroke="WHITE" strokeType="INSIDE" width="132.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
             <ImageView fitHeight="280.0" fitWidth="343.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
@@ -86,12 +86,12 @@
                   <Image url="@imgs/germany.png" />
                </image>
             </ImageView>
-            <Text fx:id="firstnameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4">
+            <Text fx:id="firstnameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3">
                <font>
                   <Font size="28.0" />
                </font>
                <GridPane.margin>
-                  <Insets right="20.0" top="16.0" />
+                  <Insets left="15.0" right="20.0" top="16.0" />
                </GridPane.margin>
             </Text>
             <Text fx:id="usernameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="2">

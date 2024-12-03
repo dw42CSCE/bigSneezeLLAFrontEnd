@@ -51,21 +51,8 @@ public class CourseHomeController {
 
     @FXML
     private void startLesson() throws IOException{
-        cmf.generateExercise(); 
-        Exercise nextExercise = cmf.getExercise();
-        if(nextExercise.getType().equals("translation")){
-            System.out.println("Switching to translation");
-            App.setRoot("translation");
-        } else if(nextExercise.getType().equals("audio")){
-            System.out.println("Switching to audio");
-            App.setRoot("audio");
-        } else if(nextExercise.getType().equals("fillin")){
-            System.out.println("Switching to fillin");
-            App.setRoot("fillin");
-        }//else if(nextExercise.getType().equals("matching")){
-        //     System.out.println("Switching to matching");
-        //     App.setRoot("matching");
-        // }
+        cmf.setLesson(cmf.getUser().getCourseProgress(cmf.getCourse()));
+        App.setRoot("lesson");
     }
 
     @FXML
