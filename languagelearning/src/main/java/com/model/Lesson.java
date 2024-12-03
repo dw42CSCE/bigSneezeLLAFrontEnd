@@ -134,4 +134,8 @@ public class Lesson {
         }
         return sentence;
     }
+
+    public int getProgress() {
+        return progress;
+    }
 }

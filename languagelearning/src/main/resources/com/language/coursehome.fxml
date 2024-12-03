@@ -59,7 +59,7 @@
       <HBox alignment="CENTER" prefHeight="102.0" prefWidth="390.0" translateY="-30.0">
          <children>
             <ScrollPane fx:id="ch_missedWordsScroll" hbarPolicy="NEVER" prefHeight="153.0" prefWidth="153.0" translateX="-20.0" />
-            <ScrollPane fx:id="ch_missedWordsScroll1" hbarPolicy="NEVER" prefHeight="153.0" prefWidth="153.0" translateX="20.0" />
+            <ScrollPane fx:id="ch_masteredWordsScroll" hbarPolicy="NEVER" prefHeight="153.0" prefWidth="153.0" translateX="20.0" />
          </children>
       </HBox>
       <Rectangle arcHeight="5.0" fill="#f2994b" height="7.0" stroke="#f2994b" strokeType="INSIDE" width="390.0" />

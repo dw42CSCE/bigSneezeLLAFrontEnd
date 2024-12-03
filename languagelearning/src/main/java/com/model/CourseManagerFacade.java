@@ -423,6 +423,14 @@ public class CourseManagerFacade {
         exercises.add(exercise);
     }
 
+    public Lesson getCurrLesson() {
+        return lesson;
+    }
+
+    public int getProgress() {
+        return lessonProgress;
+    }
+
 // TEST FOR SIGNUP, will not write new user to json yet
     // public static void main(String[] args) {
     //     CourseManagerFacade CMF = new CourseManagerFacade();
