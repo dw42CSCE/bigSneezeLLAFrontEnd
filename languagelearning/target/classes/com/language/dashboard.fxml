@@ -86,6 +86,24 @@
                   <Image url="@imgs/germany.png" />
                </image>
             </ImageView>
+            <Text fx:id="firstnameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="20.0" top="16.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="usernameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="50.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="PPText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="6" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="70.0" left="30.0" />
+               </GridPane.margin>
+            </Text>
          </children>
       </GridPane>
       <GridPane>

@@ -12,6 +12,7 @@ module com.language {
     requires org.slf4j.simple;
     requires software.amazon.awssdk.awscore;
     requires software.amazon.eventstream;
+    requires javafx.graphics;
 
     opens com.language to javafx.fxml;
     exports com.language;
