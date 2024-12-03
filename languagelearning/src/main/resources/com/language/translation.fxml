@@ -122,7 +122,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
                <children>
-                  <Button minWidth="105.0" mnemonicParsing="false" onAction="#previousQuestion" text="Previous" GridPane.halignment="LEFT">
+                  <Button minWidth="105.0" mnemonicParsing="false" onAction="#previousQuestion" text="Previous" visible="false" GridPane.halignment="LEFT">
                      <GridPane.margin>
                         <Insets left="20.0" top="20.0" />
                      </GridPane.margin>

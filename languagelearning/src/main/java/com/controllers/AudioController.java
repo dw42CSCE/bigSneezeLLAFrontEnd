@@ -116,13 +116,13 @@ public class AudioController {
                 } else if(nextExercise.getType().equals("fillin")){
                     System.out.println("Switching to fillin");
                     App.setRoot("fillin");
-                } else if(nextExercise.getType().equals("matching")){
-                    System.out.println("Switching to matching");
-                    App.setRoot("matching");
-                } else if(nextExercise.getType().equals("audio")){
+                }  else if(nextExercise.getType().equals("audio")){
                     System.out.println("Switching to audio");
                     App.setRoot("audio");
-                }
+                }//  else if(nextExercise.getType().equals("matching")){
+                //     System.out.println("Switching to matching");
+                //     App.setRoot("matching");
+                // }
             
 
                 // THIS IS THE TESTING LOGIC TEMPORARY!!!!
@@ -139,26 +139,34 @@ public class AudioController {
     }
 
     @FXML
-    void previousQuestion(ActionEvent event) throws IOException{
-        cmf.decrementLessonProgress();
-        Exercise prevExercise = cmf.getExercises().get(cmf.getLessonProgress()-1);
-        initialize();
-
-        if(prevExercise.getType().equals("translation")){
-            System.out.println("Switching to translation");
-            App.setRoot("translation");
-        } else if(prevExercise.getType().equals("fillin")){
-            System.out.println("Switching to fillin");
-            App.setRoot("fillin");
-        } else if(prevExercise.getType().equals("matching")){
-            System.out.println("Switching to matching");
-            App.setRoot("matching");
-        } else if(prevExercise.getType().equals("audio")){
-            System.out.println("Switching to audio");
-            App.setRoot("audio");
+    void previousQuestion(ActionEvent event) throws IOException {
+        if (cmf.getLessonProgress() > 1) {
+            cmf.decrementLessonProgress();
+            Exercise prevExercise = cmf.getExercises().get(cmf.getLessonProgress() - 1);
+            initialize();
+    
+            switch (prevExercise.getType()) {
+                case "translation":
+                    System.out.println("Switching to translation");
+                    App.setRoot("translation");
+                    break;
+                case "fillin":
+                    System.out.println("Switching to fillin");
+                    App.setRoot("fillin");
+                    break;
+                case "audio":
+                    System.out.println("Switching to audio");
+                    App.setRoot("audio");
+                    break;
+                default:
+                    System.out.println("Unknown exercise type");
+                    break;
+            }
+        } else {
+            System.out.println("Already at the first question. Cannot go back.");
         }
     }
-
+    
     @FXML
     void sayWord(MouseEvent event) {
         if (currentExercise != null) {

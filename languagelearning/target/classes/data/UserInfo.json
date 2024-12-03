@@ -51,5 +51,22 @@
     ],
     "words": [
     ]
+  },
+  {
+    "uuid": "432ec3c5-d19b-41c3-99e4-d0a65c187ce5",
+    "firstname": "null",
+    "lastname": "null",
+    "username": "test2",
+    "email": "test2",
+    "password": "test2",
+    "ProfPoints": 0,
+    "settings": {
+      "emailNotifications": "false",
+      "darkMode": "false"
+    },
+    "courses": [
+    ],
+    "words": [
+    ]
   }
 ]

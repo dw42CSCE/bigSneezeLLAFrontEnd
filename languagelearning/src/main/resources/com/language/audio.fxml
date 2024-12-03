@@ -19,7 +19,7 @@
    <children>
       <VBox prefHeight="94.0" prefWidth="390.0">
          <children>
-            <Text fx:id="lessonTitleText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Title Here)" >
+            <Text fx:id="lessonTitleText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Title Here)">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -128,7 +128,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
                <children>
-                  <Button minWidth="105.0" mnemonicParsing="false" onAction="#previousQuestion" text="Previous" GridPane.halignment="LEFT">
+                  <Button minWidth="105.0" mnemonicParsing="false" onAction="#previousQuestion" text="Previous" visible="false" GridPane.halignment="LEFT">
                      <GridPane.margin>
                         <Insets left="20.0" top="20.0" />
                      </GridPane.margin>

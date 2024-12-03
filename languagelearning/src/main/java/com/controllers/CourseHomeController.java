@@ -27,12 +27,12 @@ public class CourseHomeController {
         } else if(nextExercise.getType().equals("audio")){
             System.out.println("Switching to audio");
             App.setRoot("audio");
-        } //else if(nextExercise.getType().equals("matching")){
+        } else if(nextExercise.getType().equals("fillin")){
+            System.out.println("Switching to fillin");
+            App.setRoot("fillin");
+        }//else if(nextExercise.getType().equals("matching")){
         //     System.out.println("Switching to matching");
         //     App.setRoot("matching");
-        // } else if(nextExercise.getType().equals("fillin")){
-        //     System.out.println("Switching to fillin");
-        //     App.setRoot("fillin");
         // }
     }
 

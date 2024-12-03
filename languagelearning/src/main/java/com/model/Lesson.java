@@ -62,9 +62,9 @@ public class Lesson {
                 // System.out.println("test1");
                 break;
             case 1: //Matching
-                exercise = new Matching(keyWords);
-                // System.out.println("test2");
-                break;
+                // exercise = new Matching(keyWords);
+                // // System.out.println("test2");
+                // break;
             case 2: //Audio
                 exercise = new Audio(keyWords);
                 // System.out.println("test3");
