@@ -107,7 +107,7 @@ public class AudioController {
             cmf.incrementLessonProgress();
             if(cmf.getLessonProgress() == 5){
                 System.out.println("Switching to summary");
-                App.setRoot("summary");
+                App.setRoot("lessonsummary");
             } else{
                 cmf.generateExercise(); 
                 Exercise nextExercise = cmf.getExercise();
