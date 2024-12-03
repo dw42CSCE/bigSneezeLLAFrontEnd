@@ -1,5 +1,9 @@
 package com.controllers;
 
+import java.io.IOException;
+
+import com.language.App;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
@@ -11,18 +15,22 @@ public class LessonSummaryController {
     private Text lessonTitleText;
 
     @FXML
-    void nextQuestion(ActionEvent event) {
-
+    void nextQuestion(ActionEvent event) throws IOException {
+        App.setRoot("dashboard");
     }
 
     @FXML
-    void switchToDashboard(MouseEvent event) {
-
+    void switchToDashboard(MouseEvent event) throws IOException {
+        App.setRoot("dashboard");
     }
 
     @FXML
-    void switchToSettings(MouseEvent event) {
+    void switchToSettings(MouseEvent event) throws IOException {
+        App.setRoot("settings");
+    }
 
+    public void initialize(){
+        lessonTitleText.setText(null);
     }
 
 }
