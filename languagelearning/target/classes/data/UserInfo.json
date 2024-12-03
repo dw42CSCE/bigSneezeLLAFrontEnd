@@ -28,7 +28,7 @@
       "Como estas : How are you",
       "Me llamo : My name is",
       "Que hora es : What time is it",
-      "Donde esta el baÃ±o : Where is the bathroom",
+      "Donde esta el baño : Where is the bathroom",
       "Tengo hambre : I am hungry",
       "Puedes ayudarme : Can you help me",
       "Mucho gusto : Nice to meet you",
@@ -49,6 +49,24 @@
     },
     "courses": [
     ],
-    "words": []
+    "words": [
+    ]
+  },
+  {
+    "uuid": "d7f7a21f-bf0c-4324-8dd1-ded21072eeda",
+    "firstname": "null",
+    "lastname": "null",
+    "username": "khix10",
+    "email": "khix10@gmail.com",
+    "password": "1234",
+    "ProfPoints": 0,
+    "settings": {
+      "emailNotifications": "false",
+      "darkMode": "false"
+    },
+    "courses": [
+    ],
+    "words": [
+    ]
   }
 ]
