@@ -65,6 +65,10 @@ public class User {
     public WordList getIncorrect(){
         return this.incorrectWords;
     }
+
+    public WordList getCorrect() {
+        return this.correctWords;
+    }
     /** 
      * Gets the username of the user.
      * @return the username
