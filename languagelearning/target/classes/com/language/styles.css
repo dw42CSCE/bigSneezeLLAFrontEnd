@@ -15,3 +15,36 @@
 .scroll-pane {
     -fx-background-color: #7BBCB6;
 }
+
+/* General Styles */
+.header {
+    -fx-background-color: #7BBCB6;
+}
+
+.footer {
+    -fx-background-color: #7BBCB6;
+}
+
+/* Text Styles */
+.title-text {
+    -fx-font-size: 30px;
+}
+
+/* Button Styles */
+.primary-button {
+    -fx-background-color: #7BBCB6;
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-font-size: 14px;
+}
+
+.secondary-button {
+    -fx-background-color: #7BBCB6;
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-font-size: 14px;
+}
+
+/* Input Field Styles */
+.text-field {
+    -fx-prompt-text-fill: gray;
+    -fx-background-radius: 5px;
+}
