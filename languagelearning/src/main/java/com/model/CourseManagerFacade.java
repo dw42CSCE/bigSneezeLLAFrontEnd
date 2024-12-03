@@ -346,6 +346,13 @@ public class CourseManagerFacade {
         }
     }
 
+    public void addWord(Word word){
+        WordList words = user.getIncorrect();
+        words.addWord(word);
+        user.setWordList(words);
+        update();
+    }
+
     /**
      * Goes through User's first course, through lessons asking questions and tracking score
      */

@@ -92,6 +92,7 @@ public class AudioController {
                     cmf.incrementScore();
                 }
             } else {
+                cmf.addWord(currentExercise.getWord());
                 System.out.println("Incorrect Answer!");
             }
         } else {

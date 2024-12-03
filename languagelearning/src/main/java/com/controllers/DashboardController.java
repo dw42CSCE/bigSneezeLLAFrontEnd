@@ -26,6 +26,7 @@ public class DashboardController {
             cmf.setLesson(cmf.getUser().getCourseProgress(cmf.getCourse()));
         } else{
             cmf.setLesson(0);
+            cmf.addUserCourse(cmf.getCourse());
         }
         
         App.setRoot("coursehome");
