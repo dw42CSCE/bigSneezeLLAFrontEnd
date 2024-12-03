@@ -53,6 +53,7 @@ public class TranslationController {
                 System.out.println("Correct answer!");
                 correct = true;
             } else {
+                cmf.addWord(currentExercise.getWord());
                 System.out.println("Incorrect answer. Try again!");
                 System.out.println(currentExercise.getWord().getMeaning());
                 System.out.println(userAnswer);
