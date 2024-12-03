@@ -133,6 +133,7 @@ public class CourseManagerFacade {
         user = users.getUser(username, password);
         return user;
     }
+
     
     /**
      * Gets a course by uuid
