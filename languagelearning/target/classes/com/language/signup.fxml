@@ -11,8 +11,8 @@
 
 <VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.SignUpController">
    <children>
-      <VBox prefHeight="23.0" prefWidth="390.0" style="-fx-background-color: #7BBCB6;" />
-      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="109.0" prefWidth="390.0" style="-fx-background-color: #7BBCB6;">
+      <VBox prefHeight="23.0" prefWidth="390.0" styleClass="header" />
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="109.0" prefWidth="390.0" styleClass="header">
          <children>
             <ImageView fitHeight="212.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -21,21 +21,21 @@
             </ImageView>
          </children>
       </VBox>
-      <TextField fx:id="firstNameField" layoutX="30.0" layoutY="316.0" prefHeight="38.0" prefWidth="87.0" promptText="First Name" />
-      <TextField fx:id="lastNameField" prefHeight="38.0" prefWidth="87.0" promptText="Last Name" />
-      <TextField fx:id="emailAddressField" prefHeight="38.0" prefWidth="87.0" promptText="Email Address" />
-      <TextField fx:id="usernameField" prefHeight="38.0" prefWidth="87.0" promptText="Username" />
-      <TextField fx:id="passwordField" prefHeight="38.0" prefWidth="87.0" promptText="Password" />
+      <TextField fx:id="firstNameField" promptText="First Name" styleClass="text-field" />
+      <TextField fx:id="lastNameField" promptText="Last Name" styleClass="text-field" />
+      <TextField fx:id="emailAddressField" promptText="Email Address" styleClass="text-field" />
+      <TextField fx:id="usernameField" promptText="Username" styleClass="text-field" />
+      <TextField fx:id="passwordField" promptText="Password" styleClass="text-field" />
       <VBox prefHeight="23.0" prefWidth="390.0" />
       <VBox alignment="CENTER" prefHeight="46.0" prefWidth="390.0">
          <children>
-            <Button alignment="CENTER" onAction="#signup" prefHeight="90.0" prefWidth="118.0" text="Signup" textAlignment="CENTER">
+            <Button alignment="CENTER" onAction="#signup" prefHeight="90.0" prefWidth="118.0" text="Signup" textAlignment="CENTER" styleClass="primary-button">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </Button>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Already Have an Account?" textAlignment="CENTER" />
-            <Button alignment="CENTER" onAction="#switchToLogin" prefHeight="30.0" prefWidth="118.0" text="Login" textAlignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Already Have an Account?" textAlignment="CENTER" styleClass="title-text" />
+            <Button alignment="CENTER" onAction="#switchToLogin" prefHeight="30.0" prefWidth="118.0" text="Login" textAlignment="CENTER" styleClass="secondary-button">
                <VBox.margin>
                   <Insets bottom="20.0" top="20.0" />
                </VBox.margin>
@@ -51,7 +51,7 @@
             </ImageView>
          </children>
       </VBox>
-      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="97.0" prefWidth="390.0" style="-fx-background-color: #7BBCB6;">
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="97.0" prefWidth="390.0" styleClass="footer">
          <children>
             <ImageView fitHeight="76.0" fitWidth="86.0" pickOnBounds="true">
                <image>

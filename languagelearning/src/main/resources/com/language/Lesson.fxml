@@ -101,7 +101,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                   </Text>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="149.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="344.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="344.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets right="30.0" />
                      </GridPane.margin>
@@ -111,14 +111,14 @@
                         <Insets right="30.0" />
                      </GridPane.margin>
                   </Rectangle>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Info Here)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <Text fx:id="lessonIntro" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Info Here)" textAlignment="CENTER" wrappingWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
-                        <Insets right="30.0" />
+                        <Insets right="30.0" top="10.0" />
                      </GridPane.margin>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson KeyWords)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <Text fx:id="lessonKeyWords" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson KeyWords)" wrappingWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
                      <GridPane.margin>
-                        <Insets right="30.0" />
+                        <Insets right="30.0" top="10.0" />
                      </GridPane.margin>
                   </Text>
                </children>
