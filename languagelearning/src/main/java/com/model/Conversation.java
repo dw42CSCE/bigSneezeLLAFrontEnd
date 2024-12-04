@@ -26,13 +26,19 @@ public class Conversation extends Exercise {
         return firstTry;
     }
 
+    public void tried(){
+        firstTry = false;
+    }
+
+
+
+
     /**
      * Checkes user answer
      * @param userAnswer String of the users input
      * @return True if the equal to actual answer, else false
      */
     public boolean isCorrect(String userAnswer) {
-        firstTry = false;
         for (String option : question.getResponses())  {
             if (option.trim().equalsIgnoreCase(userAnswer.trim()))
                 return true;

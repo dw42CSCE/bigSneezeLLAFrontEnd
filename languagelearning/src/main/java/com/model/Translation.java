@@ -27,6 +27,10 @@ public class Translation extends Exercise {
         return firstTry;
     }
 
+    public void tried(){
+        firstTry = false;
+    }
+
 
     /**
      * Checks if user's answer is right
@@ -34,7 +38,6 @@ public class Translation extends Exercise {
      * @return Boolean, true if right, false if wrong
      */
     public boolean isCorrect(String useranswer){
-        firstTry = false;
         return useranswer.trim().equalsIgnoreCase(answer.getMeaning());
     }
 
