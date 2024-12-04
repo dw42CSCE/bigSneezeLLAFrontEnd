@@ -105,7 +105,7 @@ public class AudioController {
     void nextQuestion(ActionEvent event) throws IOException {
         if(correct){
             cmf.incrementLessonProgress();
-            if(cmf.getLessonProgress() == 5){
+            if(cmf.getLessonProgress() >= 5){
                 System.out.println("Switching to summary");
                 App.setRoot("lessonsummary");
             } else{
