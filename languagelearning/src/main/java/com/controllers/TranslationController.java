@@ -73,7 +73,7 @@ public class TranslationController {
     void nextQuestion(ActionEvent event) throws IOException {
         if(correct){
             System.out.println("Current Score: " + cmf.getCurrentScore());
-            if(cmf.getCurrentScore() >=5){
+            if(cmf.getCurrentScore() >=5 && cmf.getUser().getCourseProgress(cmf.getCourse()) <= cmf.getCourse().getLessons().indexOf(cmf.getLesson())){
                 System.out.println("adding course progress");
                 cmf.addCourseProgress();
                 System.out.println("Course Progress: " + cmf.getUser().getCourseProgress(cmf.getCourse()));
