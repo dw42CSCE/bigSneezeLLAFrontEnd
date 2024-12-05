@@ -19,6 +19,7 @@ public class LessonFillinController {
     private void switchToDashboard() throws IOException {
         App.setRoot("dashboard");
     }
+    
 
     @FXML
     private void switchToSettings() throws IOException {
