@@ -1,0 +1,27 @@
+Use the following link for help setting up credentials:
+
+https://youtu.be/asQr8Ut0sPA
+
+UPDATE:
+
+!!!New setup for credentials!!!
+
+Take the info in your credentials.txt file from video above
+
+Navigate to C:/Users/*YOUR_USER*/.aws
+
+!!!YOU MAY HAVE TO CREATE THE.aws FOLDER!!!
+
+Next, create a credentials file, names exactly "credentials" 
+
+!!!CREDENTIALS CANNOT HAVE A FILE EXTENSION!!!
+
+To remove any file extension, click view > show > filenameextensions
+
+Rename credentials.txt ---> credentials
+
+BELOW IS THE FILE FORMAT:
+
+[default]
+aws_access_key_id = ***PUT YOUR KEY HERE***
+aws_secret_access_key = ***PUT YOUR KEY HERE***
