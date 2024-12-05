@@ -1,33 +1,50 @@
 package com.controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 import com.language.App;
 import com.model.*;
 
 import javafx.fxml.FXML;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
+import javafx.scene.control.ChoiceBox;
 
-import javafx.scene.control.TextField;
-
-public class TranslationController {
+public class MatchingController {
 
     private CourseManagerFacade cmf;
     private Lesson currentLesson;
-    private Translation currentExercise;
+    private Matching currentExercise;
     private boolean correct;
+    private String[] items;
 
     @FXML
     private Text lessonTitleText;
 
     @FXML
-    private TextField userInputField;
+    private Text word1;
 
     @FXML
-    private Text spanishTranslation;
+    private Text word2;
 
-    public TranslationController() {
+    @FXML
+    private Text word3;
+
+    @FXML
+    private ChoiceBox choiceBox1;
+
+    @FXML
+    private ChoiceBox choiceBox2;
+
+    @FXML
+    private ChoiceBox choiceBox3;
+
+    public MatchingController() {
         cmf = cmf.getInstance();
     }
 
@@ -35,19 +52,28 @@ public class TranslationController {
     public void initialize() {
         // Retrieve lesson and exercise
         currentLesson = cmf.getLesson();
-        currentExercise = (Translation) cmf.getExercise();
+        currentExercise = (Matching) cmf.getExercise();
 
         if (currentLesson != null && currentExercise != null) {
+            ArrayList<Word> currentWords = new ArrayList<>(Arrays.asList(currentExercise.getWords()));
             lessonTitleText.setText(currentLesson.getSubject());
-            spanishTranslation.setText(currentExercise.getWord().getWord());
+            word1.setText(currentWords.get(0).getWord());
+            word2.setText(currentWords.get(1).getWord());
+            word3.setText(currentWords.get(2).getWord());
+            Collections.shuffle(currentWords);
+            String[] tempItems = {currentWords.get(0).getMeaning(), currentWords.get(1).getMeaning(), currentWords.get(2).getMeaning()};
+            items = tempItems;
+            choiceBox1.setItems(FXCollections.observableArrayList(items));
+            choiceBox2.setItems(FXCollections.observableArrayList(items));
+            choiceBox3.setItems(FXCollections.observableArrayList(items));
         } else {
             System.out.println("Lesson or exercise is null.");
         }
     }
-
+ 
     @FXML
     void checkAnswer(ActionEvent event) {
-        String userAnswer = userInputField.getText().trim();
+        String userAnswer = (items[choiceBox1.getSelectionModel().selectedIndexProperty().getValue()]+","+items[choiceBox2.getSelectionModel().selectedIndexProperty().getValue()]+","+items[choiceBox3.getSelectionModel().selectedIndexProperty().getValue()]);
         if (currentExercise != null) {
             if (currentExercise.isCorrect(userAnswer)) {
                 System.out.println("Correct answer!");

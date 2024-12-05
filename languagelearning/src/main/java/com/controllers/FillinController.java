@@ -116,6 +116,10 @@ public class FillinController {
                     System.out.println("Switching to fillin");
                     App.setRoot("fillin");
                     break;
+                case "matching":
+                    System.out.println("Switching to matching");
+                    App.setRoot("matching");
+                    break;
                 case "audio":
                     System.out.println("Switching to audio");
                     App.setRoot("audio");

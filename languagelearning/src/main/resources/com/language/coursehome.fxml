@@ -4,6 +4,7 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
@@ -53,13 +54,13 @@
       <HBox alignment="CENTER" prefHeight="0.0" prefWidth="390.0" translateY="-30.0">
          <children>
             <Label text="Missed Words" translateX="-50.0" underline="true" />
-            <Label text="Mastered Words" translateX="60.0" underline="true" />
+            <Label text="Lesson Selection" translateX="45.0" underline="true" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="102.0" prefWidth="390.0" translateY="-30.0">
          <children>
             <ScrollPane fx:id="ch_missedWordsScroll" hbarPolicy="NEVER" prefHeight="153.0" prefWidth="153.0" translateX="-20.0" />
-            <ScrollPane fx:id="ch_masteredWordsScroll" hbarPolicy="NEVER" prefHeight="153.0" prefWidth="153.0" translateX="20.0" />
+            <ChoiceBox fx:id="lesssonSelection" prefWidth="150.0" />
          </children>
       </HBox>
       <Rectangle arcHeight="5.0" fill="#f2994b" height="7.0" stroke="#f2994b" strokeType="INSIDE" width="390.0" />
@@ -136,7 +137,7 @@
             <Font size="32.0" />
          </font>
       </Button>
-      <VBox prefHeight="54.0" prefWidth="390.0" style="-fx-background-color: #f4f4f4;" translateY="100.0">
+      <VBox prefHeight="54.0" prefWidth="390.0" style="-fx-background-color: #f4f4f4;" translateY="96.0">
          <children>
             <Line endX="380.0" stroke="#f2994b" strokeWidth="10.0" />
             <Pane prefHeight="200.0" prefWidth="200.0">
