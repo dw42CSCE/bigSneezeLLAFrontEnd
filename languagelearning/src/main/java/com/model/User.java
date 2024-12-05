@@ -256,6 +256,10 @@ public class User {
         return settings;
     }
 
+    public void setPPoints(int ppoints){
+        proficiencyPointTotal=ppoints;
+    }
+
     /**
      * Generates a new UUID for the user.
      * @return a randomly generated UUID

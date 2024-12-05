@@ -128,6 +128,30 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                   </Text>
+                  <ImageView fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" rotate="45.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@imgs/airplane.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="30.0" left="45.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="82.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <image>
+                        <Image url="@imgs/globe.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="33.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="119.0" pickOnBounds="true" rotate="90.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@imgs/barcode.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="35.0" top="30.0" />
+                     </GridPane.margin>
+                  </ImageView>
                </children>
             </GridPane>
          </children>

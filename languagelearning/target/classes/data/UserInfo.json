@@ -28,7 +28,7 @@
       "Como estas : How are you",
       "Me llamo : My name is",
       "Que hora es : What time is it",
-      "Donde esta el baño : Where is the bathroom",
+      "Donde esta el ba?o : Where is the bathroom",
       "Tengo hambre : I am hungry",
       "Puedes ayudarme : Can you help me",
       "Mucho gusto : Nice to meet you",
@@ -42,7 +42,7 @@
     "username": "test",
     "email": "test@mail.com",
     "password": "test",
-    "ProfPoints": 0,
+    "ProfPoints": 5,
     "settings": {
       "emailNotifications": "true",
       "darkMode": "false"
@@ -50,15 +50,14 @@
     "courses": [
       {
         "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
-        "progress": 2
+        "progress": 1
       }
     ],
     "words": [
       "Buenas Tardes : Good Afternoon",
       "Gracias : Thank you",
       "De nada : You're welcome",
-      "Adiós : Goodbye",
-      "Buenas Noches : Good Night",
+      "Adi?s : Goodbye",
       "Amigo : Friend"
     ]
   },
@@ -76,6 +75,7 @@
     },
     "courses": [
     ],
-    "words": []
+    "words": [
+    ]
   }
 ]
