@@ -72,12 +72,18 @@ public class CourseHomeController {
         // lessonName.setText(lesssonSelection.getValue());
         lessonName.textProperty().bind(lesssonSelection.valueProperty());
     }
-
     @FXML
-    private void startLesson() throws IOException{
-        cmf.setLesson(cmf.getUser().getCourseProgress(cmf.getCourse()));
-        App.setRoot("lesson");
+    private void startLesson() throws IOException {
+        int selectedIndex = lesssonSelection.getSelectionModel().getSelectedIndex();
+        
+        if (selectedIndex != -1) {
+            cmf.setLesson(selectedIndex);
+            App.setRoot("lesson");
+        } else {
+            System.out.println("Please select a lesson first.");
+        }
     }
+    
 
     @FXML
     private void switchToDashboard() throws IOException {
@@ -90,7 +96,7 @@ public class CourseHomeController {
     }
 
     private void updateProgress() {
-        ch_progressBar.setProgress(cmf.getLessonProgress());
+        ch_progressBar.setProgress(cmf.getUser().getCourseProgress(cmf.getCourse())/cmf.getCourse().getLessons().size());
     }
 
     private void loadVocab() {
