@@ -6,10 +6,12 @@ import java.util.ArrayList;
 import com.language.App;
 import com.model.CourseManagerFacade;
 import com.model.Exercise;
+import com.model.Lesson;
 import com.model.User;
 import com.model.Word;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ScrollPane;
@@ -44,6 +46,9 @@ public class CourseHomeController {
     @FXML
     private Text courseName;
 
+    @FXML
+    private ChoiceBox<String> lesssonSelection;
+
 
     private CourseManagerFacade cmf;
     private ArrayList<Word> missed;
@@ -53,6 +58,8 @@ public class CourseHomeController {
     public void initialize(){
         cmf = cmf.getInstance();
         cmf.setLesson(0);
+        loadChoiceBox();
+        // lesssonSelection.getItems().add(cmf.getCurrLesson().getSubject());
         updateProgress();
         missed = cmf.getUser().getIncorrect().getWords();
         correct = cmf.getUser().getCorrect().getWords();
@@ -62,6 +69,7 @@ public class CourseHomeController {
         passengerName.setText(user.getFirstName()+" "+ user.getLastName());
         lessonName.setText(cmf.getLesson().getSubject());
         lbl_language.setText(cmf.getCourse().getLanguage().toString());
+        // lessonName.setText(lesssonSelection.getValue());
     }
 
     @FXML
@@ -89,9 +97,9 @@ public class CourseHomeController {
             loadScroll(missed, ch_missedWordsScroll);
         }
 
-        if (correct != null){
-            loadScroll(correct, ch_masteredWordsScroll);
-        }
+        // if (correct != null){
+        //     loadScroll(correct, ch_masteredWordsScroll);
+        // }
     }
 
     private void loadScroll(ArrayList<Word> words, ScrollPane scrollP) {
@@ -101,5 +109,10 @@ public class CourseHomeController {
             vbox.getChildren().add(vocLabel);
             scrollP.setContent(vbox);
         }
+    }
+
+    private void loadChoiceBox() {
+        for (int i = 0; i <= cmf.getUser().getCourseProgress(cmf.getCourse()); i++)
+            lesssonSelection.getItems().add(cmf.getCourse().getLesson(i).getSubject());
     }
 }
