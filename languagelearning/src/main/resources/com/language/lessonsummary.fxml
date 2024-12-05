@@ -73,12 +73,12 @@
                               <Insets left="88.0" />
                            </GridPane.margin>
                         </Rectangle>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 1" GridPane.rowIndex="2">
+                        <Text fx:id="missedwordone" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="110.0" />
                            </GridPane.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 2" GridPane.rowIndex="3">
+                        <Text fx:id="missedwordtwo" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 2" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="110.0" />
                            </GridPane.margin>
