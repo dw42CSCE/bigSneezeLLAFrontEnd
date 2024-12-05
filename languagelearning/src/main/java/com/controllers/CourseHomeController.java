@@ -61,6 +61,7 @@ public class CourseHomeController {
         User user = cmf.getUser();
         passengerName.setText(user.getFirstName()+" "+ user.getLastName());
         lessonName.setText(cmf.getLesson().getSubject());
+        lbl_language.setText(cmf.getCourse().getLanguage().toString());
     }
 
     @FXML
