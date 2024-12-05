@@ -54,7 +54,7 @@ public class Lesson {
      */
     public Exercise generateExercise() {
         Random rand = new Random();
-        int choice = rand.nextInt(5);
+        int choice = rand.nextInt(4);
         Exercise exercise = null;
         switch (choice) {
             case 0: //Translation
@@ -62,21 +62,59 @@ public class Lesson {
                 // System.out.println("test1");
                 break;
             case 1: //Matching
-                // exercise = new Matching(keyWords);
+                exercise = new Matching(keyWords);
                 // // System.out.println("test2");
-                // break;
-            case 2: //Audio
-                exercise = new Audio(keyWords);
-                // System.out.println("test3");
                 break;
-            case 3: //Conversation
-                // exercise = new Conversation(keyPhrases[(rand.nextInt(0, keyPhrases.length))]);
-                // System.out.println("test4");
-                // break;
-            case 4: //Fillin UNCOMMENT THIS OUT
+            case 2: //Fillin UNCOMMENT THIS OUT
                 exercise = new FillIn(keyPhrases[(rand.nextInt(keyPhrases.length))]);
                 // System.out.println("test5");
                 break;
+            case 3: //Audio
+                exercise = new Audio(keyWords);
+                // System.out.println("test3");
+                break;
+            case 4: //Conversation
+            // exercise = new Conversation(keyPhrases[(rand.nextInt(0, keyPhrases.length))]);
+            // System.out.println("test4");
+            // break;
+            default:
+                exercise = new Translation(keyWords[(rand.nextInt(keyWords.length))]);
+                // System.out.println("testD");
+                break;
+        }
+        return exercise;
+    }
+
+    public Exercise generateExercise(boolean audioEnabled) {
+        Random rand = new Random();
+        int choice = 0;
+        if (audioEnabled) {
+            choice = rand.nextInt(4);
+        } else {
+            choice = rand.nextInt(3);
+        }
+        Exercise exercise = null;
+        switch (choice) {
+            case 0: //Translation
+                exercise = new Translation(keyWords[(rand.nextInt(keyWords.length))]);
+                // System.out.println("test1");
+                break;
+            case 1: //Matching
+                exercise = new Matching(keyWords);
+                // // System.out.println("test2");
+                break;
+            case 2: //Fillin UNCOMMENT THIS OUT
+                exercise = new FillIn(keyPhrases[(rand.nextInt(keyPhrases.length))]);
+                // System.out.println("test5");
+                break;
+            case 3: //Audio
+                exercise = new Audio(keyWords);
+                // System.out.println("test3");
+                break;
+            case 4: //Conversation
+            // exercise = new Conversation(keyPhrases[(rand.nextInt(0, keyPhrases.length))]);
+            // System.out.println("test4");
+            // break;
             default:
                 exercise = new Translation(keyWords[(rand.nextInt(keyWords.length))]);
                 // System.out.println("testD");

@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" style="-fx-background-color: #7BBCB6;" styleClass="style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.LessonMatchingController">
+<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" style="-fx-background-color: #7BBCB6;" styleClass="style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.MatchingController">
    <children>
       <VBox prefHeight="94.0" prefWidth="390.0">
          <children>
@@ -101,7 +101,7 @@
                         <Insets right="30.0" />
                      </GridPane.margin>
                   </Rectangle>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Word 1)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Text fx:id="word1" strokeType="OUTSIDE" strokeWidth="0.0" text="(Word 1)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="30.0" />
                      </GridPane.margin>
@@ -121,7 +121,7 @@
                         <Insets right="30.0" />
                      </GridPane.margin>
                   </Rectangle>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Word 2)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <Text fx:id="word2" strokeType="OUTSIDE" strokeWidth="0.0" text="(Word 2)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="30.0" />
                      </GridPane.margin>
@@ -131,26 +131,15 @@
                         <Insets right="30.0" />
                      </GridPane.margin>
                   </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="135.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <GridPane.margin>
-                        <Insets right="30.0" />
-                     </GridPane.margin>
-                  </Rectangle>
                   <Button minWidth="105.0" mnemonicParsing="false" onAction="#nextQuestion" text="Next" translateY="-1.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Word 3)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                  <Text fx:id="word3" strokeType="OUTSIDE" strokeWidth="0.0" text="(Word 3)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="30.0" />
                      </GridPane.margin>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Word 4)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <GridPane.margin>
-                        <Insets right="30.0" />
-                     </GridPane.margin>
-                  </Text>
-                  <ChoiceBox prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                  <ChoiceBox prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                  <ChoiceBox prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <ChoiceBox prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ChoiceBox fx:id="choiceBox3" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <ChoiceBox fx:id="choiceBox2" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <ChoiceBox fx:id="choiceBox1" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <Button minWidth="105.0" mnemonicParsing="false" onAction="#checkAnswers" text="Check Answers" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                   <Button minWidth="105.0" mnemonicParsing="false" onAction="#previousQuestion" text="Previous" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
                </children>
