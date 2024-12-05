@@ -53,6 +53,11 @@
         "progress": 0
       }
     ],
-    "words": []
+    "words": [
+      "Hola : Hello",
+      "Adios : Bye",
+      "Gracias : Thanks",
+      "Bienvindo : Welcome"
+    ]
   }
 ]
