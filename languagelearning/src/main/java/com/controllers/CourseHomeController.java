@@ -70,6 +70,7 @@ public class CourseHomeController {
         lessonName.setText(cmf.getLesson().getSubject());
         lbl_language.setText(cmf.getCourse().getLanguage().toString());
         // lessonName.setText(lesssonSelection.getValue());
+        lessonName.textProperty().bind(lesssonSelection.valueProperty());
     }
 
     @FXML
