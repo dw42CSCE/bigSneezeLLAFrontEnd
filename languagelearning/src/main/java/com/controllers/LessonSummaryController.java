@@ -49,10 +49,24 @@ public class LessonSummaryController {
     public void initialize(){
         lessonTitleText.setText("Summary: "+cmf.getLesson().getSubject());
         WordList missedWords = cmf.getUser().getIncorrect();
-        missedwordone.setText(missedWords.getWords().get(0).getWord());
-        missedwordtwo.setText(missedWords.getWords().get(1).getWord());
-        missedwordthree.setText(missedWords.getWords().get(2).getWord());
-
+        if(missedWords.getWords().get(0) != null && missedWords.getWords().size() >= 1){
+            missedwordone.setText(missedWords.getWords().get(0).getWord());
+        }
+        else{
+            missedwordone.setText("");
+        }
+        if(missedWords.getWords().get(0) != null && missedWords.getWords().size() >= 2){
+            missedwordtwo.setText(missedWords.getWords().get(1).getWord());
+        }
+        else{
+            missedwordtwo.setText("");
+        }
+        if(missedWords.getWords().get(0) != null && missedWords.getWords().size() >= 3){
+            missedwordthree.setText(missedWords.getWords().get(2).getWord());
+        }
+        else{
+            missedwordthree.setText("");
+        }
     }
 
 }

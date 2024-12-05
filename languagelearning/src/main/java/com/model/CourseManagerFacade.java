@@ -353,6 +353,13 @@ public class CourseManagerFacade {
         }
     }
 
+    public void removeWord(Word word){
+        WordList words = user.getIncorrect();
+        words.removeWord(word);
+        user.setWordList(words);
+        update();
+    }
+
     public void addWord(Word word){
         WordList words = user.getIncorrect();
         words.addWord(word);
