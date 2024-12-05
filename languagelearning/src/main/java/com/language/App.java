@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+// FILE PATH TO JSONs that update bigSneezeLLAFrontEnd\languagelearning\target\classes\data
+
 public class App extends Application {
 
     private static Scene scene;
