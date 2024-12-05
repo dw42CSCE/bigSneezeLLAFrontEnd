@@ -7,6 +7,7 @@ import com.model.CourseManagerFacade;
 import com.model.User;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
