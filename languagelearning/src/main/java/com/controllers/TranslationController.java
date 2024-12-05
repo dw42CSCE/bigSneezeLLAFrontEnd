@@ -8,8 +8,11 @@ import com.model.*;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
-
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 
 public class TranslationController {
 
@@ -51,6 +54,7 @@ public class TranslationController {
         if (currentExercise != null) {
             if (currentExercise.isCorrect(userAnswer)) {
                 System.out.println("Correct answer!");
+                this.questionCorrect();
                 correct = true;
                 if(currentExercise.getFirstTry()){
                     cmf.removeWord(currentExercise.getWord());
@@ -60,6 +64,7 @@ public class TranslationController {
             } else {
                 currentExercise.tried();
                 cmf.addWord(currentExercise.getWord());
+                this.questionIncorrect();
                 System.out.println("Incorrect answer. Try again!");
                 System.out.println(currentExercise.getWord().getMeaning());
                 System.out.println(userAnswer);
@@ -158,4 +163,27 @@ public class TranslationController {
     private void switchToSettings() throws IOException {
         App.setRoot("settings");
     }
+
+     @FXML
+    private void questionCorrect() {
+        final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        VBox dialogVbox = new VBox(20);
+        dialogVbox.getChildren().add(new Text("Question Correct!\nProceed to the next question!"));
+        Scene dialogScene = new Scene(dialogVbox, 300, 200);
+        dialog.setScene(dialogScene);
+        dialog.show();
+    }
+
+    @FXML
+    private void questionIncorrect() {
+        final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        VBox dialogVbox = new VBox(20);
+        dialogVbox.getChildren().add(new Text("Question Incorrect.\nTry Again!"));
+        Scene dialogScene = new Scene(dialogVbox, 300, 200);
+        dialog.setScene(dialogScene);
+        dialog.show();
+    }
+
 }
