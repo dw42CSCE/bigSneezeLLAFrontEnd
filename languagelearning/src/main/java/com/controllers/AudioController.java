@@ -89,6 +89,7 @@ public class AudioController {
                 System.out.println("Correct Answer!");
                 correct = true;
                 if(currentExercise.getFirstTry()){
+                    cmf.removeWord(currentExercise.getWord());
                     cmf.incrementScore();
                     System.out.println("Adding to score: " + cmf.getCurrentScore());
                 }
