@@ -19,7 +19,7 @@ import com.model.User;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-public class LessonFillinController {
+public class FillinController {
 
     private CourseManagerFacade cmf;
     private Lesson currentLesson;
@@ -35,7 +35,7 @@ public class LessonFillinController {
     @FXML
     private TextField answerField;
 
-    public LessonFillinController() {
+    public FillinController() {
         cmf = cmf.getInstance();
     }
 

@@ -26,7 +26,7 @@
    <children>
       <Rectangle arcHeight="5.0" fill="#7bbcb6" height="11.0" stroke="#7bbcb6" strokeType="INSIDE" translateY="20.0" width="390.0" />
       <Rectangle arcHeight="5.0" fill="#7bbcb6" height="52.0" stroke="#7bbcb6" strokeType="INSIDE" translateY="30.0" width="390.0" />
-      <Label fx:id="lbl_language" prefHeight="46.0" prefWidth="172.0" text="Label" textFill="WHITE" translateX="10.0" translateY="-25.0">
+      <Label fx:id="lbl_language" prefHeight="65.0" prefWidth="340.0" text="Label" textFill="WHITE" translateX="10.0" translateY="-25.0">
          <font>
             <Font size="44.0" />
          </font>
@@ -122,7 +122,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                   </Text>
-                  <Text fx:id="courseName" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Text fx:id="courseName" strokeType="OUTSIDE" strokeWidth="0.0" text="Spain" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>

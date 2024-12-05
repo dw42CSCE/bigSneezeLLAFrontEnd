@@ -44,7 +44,7 @@ public class FillIn extends Exercise {
     }
 
     public String toString() {
-        return ("Fillin: Fill in the missing word in the following phrase:\n"+ this.translation + "\n" + this.question );
+        return (this.translation + "\n" + this.question );
     }
 }
 

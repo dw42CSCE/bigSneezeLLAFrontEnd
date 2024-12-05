@@ -184,9 +184,9 @@ public class CourseManagerFacade {
      * @param index Lesson number - 1
      */
     public void setLesson(int index) {
+        lesson = course.getLesson(index);
         lessonProgress = 0;
         currentScore = 0;
-        lesson = course.getLesson(index);
     }
 
     /**
