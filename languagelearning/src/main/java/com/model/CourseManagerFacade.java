@@ -253,7 +253,7 @@ public class CourseManagerFacade {
      * Makes new exercise
      */
     public void generateExercise(){
-        exercise = lesson.generateExercise();
+        exercise = lesson.generateExercise(user.getSettings().getDarkMode());
         exercises.add(exercise);
     }
 

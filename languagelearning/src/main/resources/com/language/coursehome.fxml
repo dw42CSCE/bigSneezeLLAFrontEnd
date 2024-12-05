@@ -137,7 +137,7 @@
             <Font size="32.0" />
          </font>
       </Button>
-      <VBox prefHeight="54.0" prefWidth="390.0" style="-fx-background-color: #f4f4f4;" translateY="100.0">
+      <VBox prefHeight="54.0" prefWidth="390.0" style="-fx-background-color: #f4f4f4;" translateY="96.0">
          <children>
             <Line endX="380.0" stroke="#f2994b" strokeWidth="10.0" />
             <Pane prefHeight="200.0" prefWidth="200.0">

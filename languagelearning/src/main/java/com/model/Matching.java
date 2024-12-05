@@ -18,7 +18,6 @@ public class Matching extends Exercise {
      */
     public Matching(Word[] words) {
         firstTry = true;
-        this.words = words;
         this.question = "";
         this.options = "";
         this.answer = "";
@@ -29,31 +28,32 @@ public class Matching extends Exercise {
         if (answers.size() > 3) {
             answers = new ArrayList<>(answers.subList(0, 3)); // Keep only the first three
         }
-    
+
+        Word[] shuffledWords = {answers.get(0), answers.get(1), answers.get(2)};
+        this.words = shuffledWords;
+
         // Building the question part
         int i = 1;
         for (Word word : answers) {
             this.question += (i + ". " + word.getWord() + "\n");
+            this.answer += (word.getMeaning()+",");
             i++;
         }
+
+        this.answer = answer.substring(0, answer.length() - 1);
     
         // Shuffle again for answer options to randomize them
         Collections.shuffle(answers);
     
-        // Building the options part and setting answer key
+        // Building the options part
         char optionLetter = 'A';
-        StringBuilder answerBuilder = new StringBuilder();
         i = 1;
     
         for (Word word : answers) {
             this.options += (optionLetter + ". " + word.getMeaning() + "\n");
-            answerBuilder.append(optionLetter).append(",");
             i++;
             optionLetter++;
         }
-    
-        // Set answer string, remove trailing comma and space
-        this.answer = answerBuilder.substring(0, answerBuilder.length() - 1);
     }
 
     public void tried(){
@@ -68,11 +68,13 @@ public class Matching extends Exercise {
         return words[0];
     }
 
+    public Word[] getWords(){
+        return this.words;
+    }
+
     public String getType(){
         return "matching";
     }
-
-    
 
     /**
      * Checks if userAnswer is correct
@@ -84,7 +86,7 @@ public class Matching extends Exercise {
     }
 
     public String toString() {
-        return ("Match the words to the translations. \n(Answer Format: \"B,C,D,A\")\n"+question+"\n"+options);
+        return ("Match the words to the translations. \n(Answer Format: \"TranslationA,TranslationC,TranslationD,TranslationA\")\n"+question+"\n"+options);
     }
 
 
