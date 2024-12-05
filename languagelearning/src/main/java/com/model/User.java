@@ -197,7 +197,14 @@ public class User {
         if(courses == null){
             courses = new HashMap<Course, Integer>();
         }
-        courses.put(course, 0);
+        if(!courses.containsKey(course)){
+            courses.put(course, 0);
+        }
+        
+    }
+
+    public void addCourseProgress(Course course){
+        courses.put(course, courses.get(course)+1);
     }
 
     /**

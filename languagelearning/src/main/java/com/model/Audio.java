@@ -40,12 +40,15 @@ public class Audio extends Exercise {
      * @return True if the user answer is the actual answer, else false
      */
     public boolean isCorrect(String userAnswer) {
-        firstTry = false;
         return (this.answer.getMeaning().trim().equalsIgnoreCase(userAnswer.trim()));
     }
 
     public boolean getFirstTry(){
         return firstTry;
+    }
+
+    public void tried(){
+        firstTry = false;
     }
     
     public Word getWord(){

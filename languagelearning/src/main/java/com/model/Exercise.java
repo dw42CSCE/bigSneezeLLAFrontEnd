@@ -10,6 +10,8 @@ public abstract class Exercise {
 
     public abstract boolean getFirstTry();
 
+    public abstract void tried();
+
     /**
      * Gets the word used in a specific question, if its a phrase, its converted to a word type
      * @return Subject of question in word form

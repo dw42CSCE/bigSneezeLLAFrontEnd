@@ -28,11 +28,12 @@
       "Como estas : How are you",
       "Me llamo : My name is",
       "Que hora es : What time is it",
-      "Donde esta el ba?o : Where is the bathroom",
+      "Donde esta el baño : Where is the bathroom",
       "Tengo hambre : I am hungry",
       "Puedes ayudarme : Can you help me",
       "Mucho gusto : Nice to meet you",
-      "Hasta luego : See you later"
+      "Hasta luego : See you later",
+      "Hola : Hello"
     ]
   },
   {
@@ -48,16 +49,8 @@
       "darkMode": "false"
     },
     "courses": [
-      {
-        "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
-        "progress": 0
-      }
     ],
     "words": [
-      "Bienvindo : Welcome",
-      "Amigo : Friend",
-      "Llamas : Name",
-      "Gracias : Thanks"
     ]
   }
 ]

@@ -90,9 +90,11 @@ public class AudioController {
                 correct = true;
                 if(currentExercise.getFirstTry()){
                     cmf.incrementScore();
+                    System.out.println("Adding to score: " + cmf.getCurrentScore());
                 }
             } else {
                 cmf.addWord(currentExercise.getWord());
+                currentExercise.tried();
                 System.out.println("Incorrect Answer!");
             }
         } else {
@@ -104,8 +106,15 @@ public class AudioController {
     @FXML
     void nextQuestion(ActionEvent event) throws IOException {
         if(correct){
+            System.out.println("Current Score: " + cmf.getCurrentScore());
+            if(cmf.getCurrentScore() >=5 && cmf.getUser().getCourseProgress(cmf.getCourse()) <= cmf.getCourse().getLessons().indexOf(cmf.getLesson())){
+                System.out.println("adding course progress");
+                cmf.addCourseProgress();
+                System.out.println("Course Progress: " + cmf.getUser().getCourseProgress(cmf.getCourse()));
+            }
+            System.out.println(cmf.getLessonProgress());
             cmf.incrementLessonProgress();
-            if(cmf.getLessonProgress() == 5){
+            if(cmf.getLessonProgress() >= 5){
                 System.out.println("Switching to summary");
                 App.setRoot("lessonsummary");
             } else{

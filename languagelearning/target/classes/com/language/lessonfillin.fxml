@@ -96,7 +96,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                   </Text>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="268.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Rectangle fx:id="questionText" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="-0.0" width="268.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
@@ -119,7 +119,7 @@
                   <Button minWidth="105.0" mnemonicParsing="false" onAction="#nextQuestion" text="Next" translateY="-1.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
                   <Button minWidth="105.0" mnemonicParsing="false" onAction="#checkAnswers" text="Check Answers" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                   <Button minWidth="105.0" mnemonicParsing="false" onAction="#previousQuestion" text="Previous" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                  <TextField promptText="Please Enter" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="answerField" promptText="Please Enter" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                </children>
             </GridPane>
             <GridPane>

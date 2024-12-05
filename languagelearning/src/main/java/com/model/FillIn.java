@@ -28,6 +28,9 @@ public class FillIn extends Exercise {
         return "fillin";
     }
 
+    public void tried(){
+        firstTry = false;
+    }
 
     public Word getWord(){
         return new Word(phrase.getPhrase(), phrase.getTranslation());
@@ -37,7 +40,6 @@ public class FillIn extends Exercise {
      * CLASS AUTHOR FILL THIS IN
      */
     public boolean isCorrect(String userAnswer) {
-        firstTry = false;
         return (answer.trim().equalsIgnoreCase(userAnswer.trim()));
     }
 

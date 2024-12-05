@@ -44,7 +44,6 @@ public class LessonSummaryController {
     @FXML
     public void initialize(){
         lessonTitleText.setText("Summary: "+cmf.getLesson().getSubject());
-        
     }
 
 }

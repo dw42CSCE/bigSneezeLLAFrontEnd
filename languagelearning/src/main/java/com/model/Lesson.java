@@ -73,7 +73,7 @@ public class Lesson {
                 // exercise = new Conversation(keyPhrases[(rand.nextInt(0, keyPhrases.length))]);
                 // System.out.println("test4");
                 // break;
-            case 4: //Fillin
+            case 4: //Fillin UNCOMMENT THIS OUT
                 exercise = new FillIn(keyPhrases[(rand.nextInt(keyPhrases.length))]);
                 // System.out.println("test5");
                 break;

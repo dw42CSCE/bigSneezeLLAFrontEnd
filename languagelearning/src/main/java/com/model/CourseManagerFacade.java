@@ -31,6 +31,7 @@ public class CourseManagerFacade {
         users = UserList.getInstance();
         course = courses.getCourse(0);
         exercises = new ArrayList<Exercise>();
+        lessonProgress = 0;
     }
 
     // Public method to access the single instance of the CMF
@@ -63,7 +64,7 @@ public class CourseManagerFacade {
      * Increases lesson progress by 1 if its not at 5, else moved lesson to next
      */
     public void incrementLessonProgress(){
-        if (lessonProgress < 5){
+        if (lessonProgress <= 5){
             lessonProgress++;
         } 
     }
@@ -100,6 +101,7 @@ public class CourseManagerFacade {
      */
     public void addUserCourse(Course course){
         user.addCourse(course);
+        update();
     }
 
     public User getUser(){
@@ -192,6 +194,10 @@ public class CourseManagerFacade {
      */
     public void incrementScore(){
         currentScore++;
+    }
+
+    public int getCurrentScore(){
+        return currentScore;
     }
 
     /**
@@ -351,6 +357,12 @@ public class CourseManagerFacade {
         WordList words = user.getIncorrect();
         words.addWord(word);
         user.setWordList(words);
+        update();
+    }
+
+    public void addCourseProgress(){
+        System.out.println(getUser().getCourseProgress(course));
+        user.addCourseProgress(course);
         update();
     }
 

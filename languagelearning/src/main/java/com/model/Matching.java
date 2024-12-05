@@ -56,6 +56,10 @@ public class Matching extends Exercise {
         this.answer = answerBuilder.substring(0, answerBuilder.length() - 1);
     }
 
+    public void tried(){
+        firstTry = false;
+    }
+
     public boolean getFirstTry(){
         return firstTry;
     }
@@ -76,7 +80,6 @@ public class Matching extends Exercise {
      * @return True if userAnswer is correct, else false
      */
     public boolean isCorrect(String userAnswer) {
-        firstTry = false;
         return (this.answer.trim().equalsIgnoreCase(userAnswer.trim()));
     }
 
