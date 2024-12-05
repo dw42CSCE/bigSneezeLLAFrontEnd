@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="744.0" prefWidth="390.0" style="-fx-background-color: #7BBCB6;" styleClass="style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.LessonSummaryController">
+   <children>
+      <VBox prefHeight="94.0" prefWidth="390.0">
+         <children>
+            <Text fx:id="lessonTitleText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="(Lesson Summary Title)">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </VBox.margin>
+            </Text>
+         </children></VBox>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="390.0">
+         <children>
+            <Line endX="380.0" fill="WHITE" stroke="#f2994b" strokeWidth="10.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson Complete!" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="579.0" prefWidth="390.0">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                <RowConstraints minHeight="100.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="100.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="100.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="150.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="169.0" stroke="WHITE" strokeType="INSIDE" width="307.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="30.0" />
+                           </GridPane.margin>
+                        </Rectangle>
+                        <Text fx:id="missedwordone" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="missedwordtwo" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Most Missed Words" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="75.0" left="10.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="missedwordthree" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="4">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Circle fill="#7bbcb6" radius="8.0" stroke="#7bbcb6" strokeType="INSIDE">
+                           <GridPane.margin>
+                              <Insets bottom="20.0" left="47.0" />
+                           </GridPane.margin>
+                        </Circle>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Circle fill="#7bbcb6" radius="8.0" stroke="#7bbcb6" strokeType="INSIDE">
+                           <GridPane.margin>
+                              <Insets bottom="12.0" left="67.0" />
+                           </GridPane.margin>
+                        </Circle>
+                     </children>
+                  </GridPane>
+                  <ImageView fitHeight="270.0" fitWidth="337.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@imgs/summaryfox.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets right="40.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button minWidth="105.0" mnemonicParsing="false" onAction="#nextQuestion" text="Home" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox prefHeight="74.0" prefWidth="390.0" style="-fx-background-color: #f4f4f4;">
+         <children>
+            <Line endX="380.0" stroke="#f2994b" strokeWidth="10.0" />
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#switchToDashboard" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="100.0" layoutX="62.0" layoutY="3.0" onMouseClicked="#switchToSettings" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/Settings.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="153.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Big Sneeze ©2024" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

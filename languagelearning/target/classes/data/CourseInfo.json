@@ -1,0 +1,109 @@
+[
+    {
+    "language": "Spanish",
+    "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
+    "progress": 0,
+    "lessons": [
+        {
+        "subject": "Introduction to Spanish",
+        "progress": 0,
+        "intro": "Welcome to Big Sneeze's Spanish course! To start off we would like to say, Hola! That means \"Hello\" in Spanish!\nSome basic greetings are:\n",
+        "keywords": [
+            "Llamas : Name",
+            "Hola : Hello",
+            "Bienvindo : Welcome",
+            "Amigo : Friend",
+            "Gracias : Thanks",
+            "Adios : Bye"
+            ],
+        "keyphrases": [
+            "Por Favor : Please",
+            "Buenas Noches : Good Night",
+            "Buenas Tardes : Good Afternoon",
+            "Buenos Dias : Good Morning",
+            "Como te llamas? : What is your name?"
+            ],
+        "exercises": [
+            {
+            "question": "\"Hello\" in spanish is: _______",
+            "type": "Fill_In",
+            "options": "Hola  |  Como te llamas  |  Buenas dias  |  Buenas Noches",
+            "answer": "Hola"
+            },
+            {
+            "question": "Match the following to their spanish translation (format: \"1, 2, 3, 4\" english numbers) \nEnglish:\n1. Good night\n2. Hello\n3. Good morning\n4. What is your name\n",
+            "type":"Matching",
+            "options": "Spanish:\n1. Hola \n2. Como te llamas \n3. Buenas dias \n4. Buenas noches",
+            "answer": "2, 4, 3, 1"
+            },
+            {
+            "question": "Fill in the blank to say \"Good Morning\"\nBuenas ______",
+            "type":"Fill_In",
+            "options": "Llamas  |  Tardes  |  Dias  |  Noches",
+            "answer": "Dias"
+            },
+            {
+            "question": "Respond to the following: Beunas Dias!",
+            "type":"Conversation",
+            "options": "Llamas  |  Buanas Tardes  |  Buenas Dias  |  Buanas Noches",
+            "answer": "Buenas Dias"
+            },
+            {
+            "question": "Listen to the following audio and select an answer",
+            "type":"Audio",
+            "options": "Llamas  |  Tardes  |  Buenas Dias  |  Hola",
+            "answer": "Hola"
+            }
+            ]
+        },
+        {
+        "subject": "Common Spanish Phrases",
+        "progress": 0,
+        "intro": "In this lesson, we'll explore some commonly used Spanish phrases that will help you in daily conversations.",
+        "keywords": [
+            "Siento : Sorry",
+            "Gracias : Thanks",
+            "Si : Yes",
+            "No : No"
+        ],
+        "keyphrases": [
+            "Lo siento : I'm sorry",
+            "Por favor : Please",
+            "De nada : You're welcome"
+        ],
+        "exercises": [
+            {
+            "question": "\"I'm sorry\" in Spanish is: _________",
+            "type":"Fill_In",
+            "options": "Gracias  |  Lo siento  |  De nada  |  Por favor",
+            "answer": "Lo siento"
+            },
+            {
+            "question": "Match the following to their spanish translation (format: \"1, 2, 3, 4\" english numbers) \n English:\n1. Thank you\n2. Please\n3. Your welcome\n4. Im sorry\n ",
+            "type":"Matching",
+            "options": "Spanish:\n1. Por favor \n2. Gracias \n3. Lo siento \n4. De nada",
+            "answer": "2, 1, 4, 3"
+            },
+            {
+            "question": "Respond to someone saying \"Gracias\"",
+            "type":"Conversation",
+            "options": "Gracias  |  Por favor  |  De nada  |  Lo siento",
+            "answer": "De nada"
+            },
+            {
+            "question": "Listen to the following audio and select an answer",
+            "type":"Audio",
+            "options": "Gracias  |  Lo siento  |  De nada  |  Por favor",
+            "answer": "Lo siento"
+            },
+            {
+            "question": "What would you say if you accidentally stepped on someone's foot?",
+            "type":"Matching",
+            "options": "Gracias  |  Lo siento  |  De nada  |  Por favor",
+            "answer": "Lo siento"
+            }
+        ]
+        }
+    ]
+}
+]
