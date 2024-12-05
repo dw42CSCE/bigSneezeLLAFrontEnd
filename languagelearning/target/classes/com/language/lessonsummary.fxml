@@ -73,15 +73,21 @@
                               <Insets bottom="30.0" />
                            </GridPane.margin>
                         </Rectangle>
-                        <Text fx:id="missedwordone" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 1" GridPane.rowIndex="1">
+                        <Text fx:id="missedwordone" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <GridPane.margin>
-                              <Insets left="25.0" />
+                              <Insets />
                            </GridPane.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
                         </Text>
-                        <Text fx:id="missedwordtwo" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 2" GridPane.rowIndex="2">
+                        <Text fx:id="missedwordtwo" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <GridPane.margin>
-                              <Insets left="25.0" />
+                              <Insets />
                            </GridPane.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
                         </Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Most Missed Words" GridPane.rowIndex="1">
                            <font>
@@ -91,10 +97,13 @@
                               <Insets bottom="75.0" left="10.0" />
                            </GridPane.margin>
                         </Text>
-                        <Text fx:id="missedwordthree" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 3" GridPane.rowIndex="3">
+                        <Text fx:id="missedwordthree" strokeType="OUTSIDE" strokeWidth="0.0" text="Missed word 3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <GridPane.margin>
-                              <Insets left="25.0" />
+                              <Insets />
                            </GridPane.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
                         </Text>
                      </children>
                   </GridPane>

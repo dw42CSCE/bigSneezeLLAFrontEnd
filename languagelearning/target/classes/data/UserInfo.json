@@ -55,5 +55,30 @@
     ],
     "words": [
     ]
+  },
+  {
+    "uuid": "0d134c73-298a-4687-bfc9-5e6648317593",
+    "firstname": "Kyle",
+    "lastname": "Hix",
+    "username": "khix10",
+    "email": "kyleHix@email.com",
+    "password": "1234",
+    "ProfPoints": 0,
+    "settings": {
+      "emailNotifications": "false",
+      "darkMode": "false"
+    },
+    "courses": [
+      {
+        "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
+        "progress": 0
+      }
+    ],
+    "words": [
+      "Buenos Dias : Good Morning",
+      "Llamas : Name",
+      "Como te llamas? : What is your name?",
+      "Amigo : Friend"
+    ]
   }
 ]
