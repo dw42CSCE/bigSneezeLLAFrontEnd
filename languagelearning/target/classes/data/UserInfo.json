@@ -28,7 +28,7 @@
       "Como estas : How are you",
       "Me llamo : My name is",
       "Que hora es : What time is it",
-      "Donde esta el baÃ±o : Where is the bathroom",
+      "Donde esta el baño : Where is the bathroom",
       "Tengo hambre : I am hungry",
       "Puedes ayudarme : Can you help me",
       "Mucho gusto : Nice to meet you",
@@ -50,36 +50,11 @@
     "courses": [
       {
         "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
-        "progress": 2
+        "progress": 1
       }
     ],
     "words": [
-      "Buenas Noches : Good Night"
-    ]
-  },
-  {
-    "uuid": "0d134c73-298a-4687-bfc9-5e6648317593",
-    "firstname": "Kyle",
-    "lastname": "Hix",
-    "username": "khix10",
-    "email": "kyleHix@email.com",
-    "password": "1234",
-    "ProfPoints": 0,
-    "settings": {
-      "emailNotifications": "false",
-      "darkMode": "false"
-    },
-    "courses": [
-      {
-        "uuid": "b1303bf7-6575-41ea-93fb-4bb8da658eda",
-        "progress": 0
-      }
-    ],
-    "words": [
-      "Buenos Dias : Good Morning",
-      "Llamas : Name",
-      "Como te llamas? : What is your name?",
-      "Amigo : Friend"
+      "Gracias : Thanks"
     ]
   }
 ]
