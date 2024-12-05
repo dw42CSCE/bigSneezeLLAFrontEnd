@@ -34,7 +34,7 @@ public class DashboardController {
     }
 
     @FXML
-    void goToSettings(MouseEvent event) throws IOException {
+    void switchToSettings(MouseEvent event) throws IOException {
         App.setRoot("settings");
     }
 
