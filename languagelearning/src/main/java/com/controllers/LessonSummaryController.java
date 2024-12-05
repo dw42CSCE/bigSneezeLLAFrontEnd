@@ -50,6 +50,7 @@ public class LessonSummaryController {
         lessonTitleText.setText("Summary: "+cmf.getLesson().getSubject());
         WordList missedWords = cmf.getUser().getIncorrect();
         cmf.getUser().setPPoints(cmf.getUser().getProfPoints()+5);
+        if(!missedWords.getWords().isEmpty()){
         if(missedWords.getWords().get(0) != null && missedWords.getWords().size() >= 1){
             missedwordone.setText(missedWords.getWords().get(0).getWord());
         }
@@ -67,6 +68,7 @@ public class LessonSummaryController {
         }
         else{
             missedwordthree.setText("");
+        }
         }
     }
 
